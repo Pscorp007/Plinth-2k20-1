@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/head %>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/talks.css">
+    <link rel="stylesheet" href="./css/team.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader-ring"></div>
+    </div>
+    <% include partials/header %>
+
+    <!-- Shaders -->
+    <script id="shader-fs" type="x-shader/x-fragment">
+        #ifdef GL_ES
+	    precision highp float;
+	    #endif
+	  void main(void) {
+	   gl_FragColor = vec4(0.2, 0.3, 0.4, 1.0);
+	  }
+	</script>
+    <script id="shader-vs" type="x-shader/x-vertex">
+        attribute vec3 vertexPosition;
+
+	  uniform mat4 modelViewMatrix;
+	  uniform mat4 perspectiveMatrix;
+
+	  void main(void) {
+	    gl_Position = perspectiveMatrix * modelViewMatrix * vec4(  vertexPosition, 1.0);
+	  }
+	</script>
+
+
+    <!-- three.js -->
+
+    <div id="webgl-output"></div>
+
+    <div class="bg-mask"></div>
+
+
+    <h1 class="th1" style="padding-top:12vh; text-align: center;color:#b0aeda;transform: scale(1)">Our Team</h1>
+    <div class="main-content">
+        <div class="scroll-content" id="style-1">
+            <div class="inner-content ch-grid">
+                <div class="text-padding" style="transform: scale(1);">
+
+
+
+                    <div class="row deck justify-content-center">
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Anvesh Sharma</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/ANVESH SHARMA.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>G.Sec., Science & Tech Council</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:16ucs043@lnmiit.ac.in">16ucs043@lnmiit.ac.in <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a
+                                                    href="tel:+91-9460521981">+91-9460521981 </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/anvesh.sharma.54/"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/anvesh-sharma-a298bb129/"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Vrinda Goel</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/Vrinda Goel.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>Asso. G.Sec, Science & Tech Council</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:16ucs216@lnmiit.ac.in">16ucs216@lnmiit.ac.in <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a
+                                                    href="tel:+91-8003890410">+91-8003890410 </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/theexplorer41198"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/vrinda41198/"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row deck justify-content-center">
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Puru Upadhyay</h3>
+                                    <img class="profile-photo rounded-circle" src="./media/team/puru.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>Finance Secretary</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:16umm015@lnmiit.ac.in">16umm015@lnmiit.ac.in <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a
+                                                    href="tel:+91-9166015620">+91-9166015620</a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/puru.upadhyay.7/"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Suyash Agrawal</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/SUYASH AGRAWAL.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>Fest Convenor</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:16ucs192@lnmiit.ac.in">16ucs192@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-7339875167
+                                            ">+91-7339875167
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/suyash.agrawal.09/"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Samruddhi Pathak</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/SAMRUDDHI PATHAK.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>Sponsorship Lead</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:16umm018@lnmiit.ac.in">16umm018@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-8290902886">+91-8290902886
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://m.facebook.com/samruddhi.pathak.75/"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                            <li class="list-inline-item"><a href="https://twitter.com/sampathak1997?s=08"
+                                                    target="_blanck"><i class="fab fa-twitter" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row deck justify-content-center">
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Aakash Mahadevan</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/Aakash Mahadevan.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>Head of Operations</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:16ucc001@lnmiit.ac.in">16ucc001@lnmiit.ac.in <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a
+                                                    href="tel:+91-9660845930">+91-9660845930 </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href=https://m.facebook.com/imaakash98?ref=bookmarks"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/mwlite/me"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Swarnim</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/swarnim.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>Website & Tech Lead</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:16uec111@lnmiit.ac.in">16uec111@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-9431027030">+91-9431027030
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/swarnim1212"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                            <li class="list-inline-item"><a href="https://twitter.com/nimbus_1212"
+                                                    target="_blanck"><i class="fab fa-twitter" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://github.com/nimbus1212/"
+                                                    target="_blanck"><i class="fab fa-github" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/nimbus1212/"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Aditya Bhattacharjee</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/ADITYA BHATTACHARJEE.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>Talk Series Lead</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:16ucs016@lnmiit.ac.in">16ucs016@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-9571069270">+91-9571069270
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/aditya.bhattacharjee.14"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row deck justify-content-center">
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Ankit Sharma</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/ankit sharma.jpg" />
+                                    <div class="profile-note">
+                                        <p><b>Management & Marketing Lead</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:16ume009@lnmiit.ac.in">16ume009@lnmiit.ac.in <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a
+                                                    href="tel:+91-8890006005">+91-8890006005 </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/ankit.sharma.319452"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                            <li class="list-inline-item"><a href="https://www.instagram.com/ankitsharma0005/?hl=en"
+                                                    target="_blanck"><i class="fab fa-instagram" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Rhitayu Chattopadhyay</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/Rhitayu Chattopadhyay.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>Content Lead</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:17ucs125@lnmiit.ac.in">17ucs125@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-8529832104">+91-8529832104
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://facebook.com/rhitayu.chattopadhyay/"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                            <li class="list-inline-item"><a href="https://twitter.com/rhitayu/" target="_blanck"><i
+                                                        class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Yash Parashar</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/Yash Parashar.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>Design Lead</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:17uec138@lnmiit.ac.in">17uec138@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-9806145625">+91-9806145625
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://m.facebook.com/lookforyash"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/yash-parashar-3b7261151"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.instagram.com/muskuratamusafir/"
+                                                    target="_blanck"><i class="fab fa-instagram" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row deck justify-content-center">
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Raman Choudhary
+                                    </h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/raman.jpg" />
+                                    <div class="profile-note">
+                                        <p><b>Hospitality Head</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:16ucs154@lnmiit.ac.in">16ucs154@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-7340698595">+91-7340698595
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://m.facebook.com/raman.33333?ref=bookmarks"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Anushka Prakash
+                                    </h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/ANUSHKA PRAKASH.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>Creative Lead</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:16ucs223@lnmiit.ac.in">16ucs223@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-08290571677">+91-08290571677
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/anushka.prakash.18"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://github.com/anushkaprakash"
+                                                    target="_blanck"><i class="fab fa-github" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/anushka-prakash-2b534212b/"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Ishaan Kumar</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/ishaan.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>Designing Consultant</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:17ume027@lnmiit.ac.in">17ume027@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-9082307820">+91-9082307820
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://m.facebook.com/ishaan.kumar.1048554"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row deck justify-content-center">
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Harsh Upadhyay</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/HARSH UPADHYAY.png" />
+                                    <div class="profile-note">
+                                        <p><b>Accomodation Lead</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:16ucs073@lnmiit.ac.in">16ucs073@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-09929543341">+91-09929543341
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/harsh.upadhyay.92351"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                            <li class="list-inline-item"><a href="https://github.com/harshup18" target="_blanck"><i
+                                                        class="fab fa-github" aria-hidden="true"></i><span class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/harsh-upadhyay-21a7a5135/"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.instagram.com/harshupadhyay18/?hl=en"
+                                                    target="_blanck"><i class="fab fa-instagram" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Monil Narang</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/MONIL NARANG (1).jpg" />
+                                    <div class="profile-note">
+                                        <p><b>Coordinator, Astronomy club
+                                            </b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:16ucs110@lnmiit.ac.in">16ucs110@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+919462236381 ">+919462236381
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/monilnarang10?ref=br_rs"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Ujjwal Agarwal</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/ujjwal.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>Coordinator, E-Cell
+                                            </b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:16uec113@lnmiit.ac.in">16uec113@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+919828785561 ">+919828785561
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/ujjwal.agarwal.9277"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row deck justify-content-center">
+
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Honey Agrawal
+                                    </h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/honey.jpg" />
+                                    <div class="profile-note">
+                                        <p><b>CA Programme Lead & Sponsorship</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:17ucs070@lnmiit.ac.in">17ucs070@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-8058146090">+91-8058146090
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/honey.agrwl.737"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Arthak</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/arthak.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>Workshop Lead</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:17ucs036@lnmiit.ac.in">17ucs036@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-8459347934">+91-8459347934
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="bit.ly/art_fb" target="_blanck"><i
+                                                        class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.instagram.com/_arthak03/"
+                                                    target="_blanck"><i class="fab fa-instagram" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="bit.ly/art_gh" target="_blanck"><i
+                                                        class="fab fa-github" aria-hidden="true"></i><span class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/arthak/"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Parth Patel</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/parthpatel.JPG" />
+                                    <div class="profile-note">
+                                        <p><b>Tech Team</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:17ucs107@lnmiit.ac.in">17ucs107@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-9898353942">+91-9898353942
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/realparthpatel"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.github.com/parth910"
+                                                    target="_blanck"><i class="fab fa-github" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/parth-patel-5b10a214b/"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.instagram.com/parth_oo7_/"
+                                                    target="_blanck"><i class="fab fa-instagram" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="row deck justify-content-center">
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Apoorv Taneja
+                                    </h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/apoorvtaneja.jpg" />
+                                    <div class="profile-note">
+                                        <p><b>Tech Team</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:17uec138@lnmiit.ac.in">17uec138@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-9806145625">+91-9806145625
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/apoorv.taneja.5
+                                                        "
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                            <li class="list-inline-item"><a href="https://www.github.com/plxity" target="_blanck"><i
+                                                        class="fab fa-github" aria-hidden="true"></i><span class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Adarsh Punj</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/adarsh.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>App Devloper</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:17uec015@lnmiit.ac.in">17uec015@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-9571969490">+91-9571969490
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/adarsh.lnm"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.github.com/adarshpunj"
+                                                    target="_blanck"><i class="fab fa-github" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/adarshpunj/"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Mohit Sharma</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/mohit.jpg" />
+                                    <div class="profile-note">
+                                        <p><b>Event Organizer</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:17ucc036@lnmiit.ac.in">17ucc036@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-9636183734">+91-9636183734
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/mohitsmr23"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.instagram.com/mohitsmr_23/"
+                                                    target="_blanck"><i class="fab fa-instagram" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://github.com/Mohitsmr23" target="_blanck"><i
+                                                        class="fab fa-github" aria-hidden="true"></i><span class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/mohit-sharma-7b9281152"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row deck justify-content-center">
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Shatishay jain
+                                    </h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/shatishay jain (1).jpg" />
+                                    <div class="profile-note">
+                                        <p><b>Sponsorship & Management Team
+                                            </b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:17ucs146@lnmiit.ac.in ">17ucs146@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-8954666698">+91-8954666698
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/shatisay.jain?fref=search&__tn__=%2Cd%2CP-R&eid=ARDrbOZDOCI3BrS-fDqRCHNEnAjLWei6YhuKT9l8YYUG17akZmuDuoYUUgre8gJ2WPnnJB4e2cNknm5a"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Sudhanshu Agrawal</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/sudhanshu agrawal (1).jpg" />
+                                    <div class="profile-note">
+                                        <p><b>Sponsorship & Management Team
+                                            </b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:17ucs161@lnmiit.ac.in">17ucs161@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-9140875792">+91-9140875792
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/sudhanshu.agrawal.980?ref=br_rs"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Vishal Agrawal
+                                    </h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/vishal agrawal.jpg" />
+                                    <div class="profile-note">
+                                        <p><b>Sponsorship & Management Team</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:17ucc068@lnmiit.ac.in ">17ucc068@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-8949761750 ">+91-8949761750
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100011279971284&ref=br_rs
+                                                "
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="row deck justify-content-center">
+
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Vipul Vaibhav</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/Vipul Vaibhav (1).jpg" />
+                                    <div class="profile-note">
+                                        <p><b>Event Organizer</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:17ucs181@lnmiit.ac.in">17ucs181@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-8009784441">+91-8009784441
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/vipul5247"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/vipul-vaibhav-86a3624b/"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Nikhil Gogia
+                                    </h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/Nikhil Gogia (1).jpg" />
+                                    <div class="profile-note">
+                                        <p><b>Sub-Coordinator Cybros
+                                            </b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:17ucc037@lnmiit.ac.in ">17ucc037@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-8529832077">+91-8529832077
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://facebook.com/nikhil1010
+                                                "
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Vaishnavi Soni</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/Vaishnavi Soni (1).png" />
+                                    <div class="profile-note">
+                                        <p><b>Sponsorship & Accomodation Team</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:17ume063@lnmiit.ac.in">17ume063@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-7987208558">+91-7987208558
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/vaishnavi.soni.520900"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/vaishnavi-soni-170105151"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.instagram.com/expressiveintrovert/"
+                                                    target="_blanck"><i class="fab fa-instagram" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row deck justify-content-center">
+
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Shubhi Rustagi</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/Shubhi Rustagi.jpg" />
+                                    <div class="profile-note">
+                                        <p><b>Sponsornship & Management Team</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:17ucs158@lnmiit.ac.in">17ucs158@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-8586000240">+91-8586000240
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/shubhi.rustagi.9"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://github.com/rustagishubhi"
+                                                    target="_blanck"><i class="fab fa-github" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/shubhi-rustagi-2461b7150"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.instagram.com/__shubhiii__/?hl=en"
+                                                    target="_blanck"><i class="fab fa-instagram" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Nandini Dhakad
+                                    </h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/nandini dhakad.png" />
+                                    <div class="profile-note">
+                                        <p><b>Mangement Team</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a href="mailto:17dcs008@lnmiit.ac.in ">17dcs008@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-9644327103 ">+91-9644327103
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://m.facebook.com/home.php?hrc=1&refsrc=http%3A%2F%2Fh.facebook.com%2Fhr%2Fr&_rdr#!/nandini.dhakad.16?ref=bookmarkss
+                                                "
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                            <li class="list-inline-item"><a href="http://Instagram.com/nandini.dhakad"
+                                                    target="_blanck"><i class="fab fa-instagram" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Hemant Jindgar
+                                    </h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/Hemant Jindgar.jpg" />
+                                    <div class="profile-note">
+                                        <p><b>Sub-Coordinator, Phoenix</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:17ucs066@lnmiit.ac.in">17ucs066@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-7023897272 ">+91-7023897272
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://m.facebook.com/hemant.jindgar?ref=bookmarks"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row deck justify-content-center">
+
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Namrata Ruchandani</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/namrata ruchandani.png" />
+                                    <div class="profile-note">
+                                        <p><b>Sponsornship Team</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:17uec078@lnmiit.ac.in">17uec078@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-8079047775">+91-8079047775
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href=" https://www.facebook.com/profile.php?id=100009428525693"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://github.com/Namrata2108"
+                                                    target="_blanck"><i class="fab fa-github" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/namrata-ruchandani-349a36166"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.instagram.com/namrata_ruchandani/"
+                                                    target="_blanck"><i class="fab fa-instagram" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Tarun Singh
+                                    </h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/Tarun Singh.png" />
+                                    <div class="profile-note">
+                                        <p><b>Aftermovie Editor</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:17ucs169@lnmiit.ac.in">17ucs169@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-9917360131">+91-9917360131
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/TarunSinghT49"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/thetseffect"
+                                                    target="_blanck"><i class="fab fa-linkedin" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.instagram.com/tarunsingh_49f/"
+                                                    target="_blanck"><i class="fab fa-instagram" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Tarun Gupta
+                                    </h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/tarun gupta.jpg" />
+                                    <div class="profile-note">
+                                        <p><b>Sponsorship & Management Team</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:17ucs168@lnmiit.ac.in">17ucs168@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-8602662518">+91-8602662518
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100011205157708"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                            <li class="list-inline-item"><a href="https://www.instagram.com/happisoul01/"
+                                                    target="_blanck"><i class="fab fa-instagram" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="row deck justify-content-center">
+
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Karan Bajaj</h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/Karan Bajaj.jpg" />
+                                    <div class="profile-note">
+                                        <p><b>Management Team</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:18uec012@lnmiit.ac.in">18uec012@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-7231962449">+91-7231962449
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/karan.bajaj.7568"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Madhur Mangal
+                                    </h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/Madhur Mangal.png" />
+                                    <div class="profile-note">
+                                        <p><b>Management Team</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:18ucs120@lnmiit.ac.in">18ucs120@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-8529428487">+91-8529428487
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://m.facebook.com/madhur.mangal.9?ref=bookmarks"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="card-wrapper">
+                                <div class="card profile-card">
+                                    <h3 class="profile-name">Garvit Gupta
+                                    </h3>
+                                    <img class="profile-photo rounded-circle" src="../public/media/team/Garvit Gupta.jpeg" />
+                                    <div class="profile-note">
+                                        <p><b>Management Team</b><br><i class="fas fa-envelope"></i>&nbsp:&nbsp<a
+                                                href="mailto:18ucs018@lnmiit.ac.in">18ucs018@lnmiit.ac.in
+                                                <br><i class="fas fa-phone fa-rotate-90"></i>&nbsp:&nbsp<a href="tel:+91-9664237300">+91-9664237300
+                                                </a></p>
+                                    </div>
+                                    <!-- /.profile-note -->
+
+                                    <div class="card-footer">
+                                        <ul class="list-social list-inline">
+                                            <li class="list-inline-item"><a href="https://www.facebook.com/garvit.gupta.9235"
+                                                    target="_blanck"><i class="fab fa-facebook-square" aria-hidden="true"></i><span
+                                                        class="sr-only">Website</span></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <% include partials/footer %>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/loginscript.js"></script>
+    <script src="js/scrollmagic.js"></script>
+    <script src="js/sphere.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+
+            var el = document.querySelector('.preloader');
+            el.style.opacity = 1;
+
+            (function fade() {
+                if ((el.style.opacity -= 0.15) < 0) {
+                    window.scrollTo(0, 0);
+                    el.style.display = "none";
+                    controls.redraw();
+                    controls.rend();
+                    controls.start();
+                } else {
+                    requestAnimationFrame(fade);
+                }
+            })();
+        });
+    </script>
+    <script>
+        if (screen.width > 1024) {
+            function remove() {
+                var elem = document.getElementById('rlbuttn');
+                elem.parentNode.removeChild(elem);
+                return false;
+            }
+            remove();
+        }
+    </script>
+    <script>
+        var elem = document.getElementById('rlbuttn_menu');
+        if (elem != null) {
+            if (screen.width > 1024) {
+                function remove() {
+
+                    elem.parentNode.removeChild(elem);
+                    return false;
+                }
+                remove();
+            }
+        }
+    </script>
+
+    <script>
+        var elem = document.getElementById('faqbtn_rm');
+        if (elem != null) {
+            if (screen.width < 500) {
+                function remove() {
+
+                    elem.parentNode.removeChild(elem);
+                    return false;
+                }
+                remove();
+            }
+        }
+    </script>
+    <script>
+        if (screen.width > 500) {
+            function remove() {
+                var elem = document.getElementById('faq_rm');
+                elem.parentNode.removeChild(elem);
+                return false;
+            }
+            remove();
+        }
+    </script>
+    <script>
+        if (screen.width < 769) {
+            function remove() {
+                var elem = document.getElementById('seprate');
+                elem.parentNode.removeChild(elem);
+                return false;
+            }
+            remove();
+        }
+    </script>
+    <script>
+        if (screen.width > 769) {
+            function remove() {
+                var elem = document.getElementById('mobsep');
+                elem.parentNode.removeChild(elem);
+                return false;
+            }
+            remove();
+        }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="js/js.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-125190547-1');
+    </script>
+
+</body>
+
+</html>

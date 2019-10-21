@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/head %>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/terms.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader-ring"></div>
+    </div>
+    <% include partials/header %>
+
+    <!-- Shaders -->
+    <script id="shader-fs" type="x-shader/x-fragment">
+        #ifdef GL_ES
+	    precision highp float;
+	    #endif
+	  void main(void) {
+	   gl_FragColor = vec4(0.2, 0.3, 0.4, 1.0);
+	  }
+	</script>
+    <script id="shader-vs" type="x-shader/x-vertex">
+        attribute vec3 vertexPosition;
+
+	  uniform mat4 modelViewMatrix;
+	  uniform mat4 perspectiveMatrix;
+
+	  void main(void) {
+	    gl_Position = perspectiveMatrix * modelViewMatrix * vec4(  vertexPosition, 1.0);
+	  }
+	</script>
+
+
+    <!-- three.js -->
+
+    <div id="webgl-output"></div>
+
+    <div class="bg-mask"></div>
+
+
+    <h1 style="padding-top:15vh; text-align: center;transform: scale(1);">Terms & Conditions</h1>
+    <div class="main-content">
+        <div class="scroll-content" id="style-1">
+            <div class="inner-content">
+                <div class="text-padding" style="transform: scale(1);">
+                    <div class="heading">
+                        Disclaimer
+                    </div>
+                    <div class="text">
+                        This service is provided to facilitate access and make payments online. Plinth’19 or the
+                        payment service provider do not
+                        make any representation of any kind, explicit or implicit, as
+                        to the payment gateway other than what is specified on Plinth’s
+                        website. By accepting/agreeing to these terms and conditions,
+                        the user agrees that the use of online payment service is entirely
+                        at own risk and responsibility.
+                    </div>
+                    <div class="heading">
+                        Privacy Policy
+                    </div>
+                    <div class="text">
+                        <ul>
+                            <li>
+                                <span class="bolder">Information we collect :</span><span class="text"> We ensure that
+                                    the collection
+                                    of personal information is limited to what is necessary
+                                    to fulfill the purpose as mentioned. If your information
+                                    is used in a manner different than the purpose it is
+                                    collected, then we will ask you for your consent prior
+                                    to its use.</span>
+                            </li>
+                            <li>
+                                <span class="bolder">How do we use your information :</span><span class="text"> Your
+                                    information
+                                    will be used to process transactions. Your information
+                                    will not be sold, exchanged or given to any other institution
+                                    for reason whatsoever, without your consent, other than
+                                    delivering the purchased service or product.</span>
+                            </li>
+                            <li>
+                                <span class="bolder">Cookies :</span><span class="text"> Plinth.in uses cookies to
+                                    store information
+                                    about visitors' preferences, to personalize or customize
+                                    our web page content based upon visitors' browser type
+                                    or other information that the visitor sends via their
+                                    browser. Any information collected via cookies will not
+                                    be shared with any third party.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="heading">
+                        Consent
+                    </div>
+                    <div class="text">
+                        By using our website, you hereby consent to our privacy policy and agree to its terms and
+                        conditions.
+                    </div>
+
+                    <div class="heading">
+                        Cancellation Policy
+                    </div>
+                    <div class="text">
+                        No amount will be refunded upon the cancellation of your tickets or passes. In case of any
+                        conflict, the decision of the
+                        organizers will be final. In any event, the organizers shall
+                        not be liable for special, punitive, consequential or incidental
+                        damages, including lost revenue, profits or other benefits.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <% include partials/footer %>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/loginscript.js"></script>
+    <script src="js/scrollmagic.js"></script>
+    <script src="js/sphere.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+
+            var el = document.querySelector('.preloader');
+            el.style.opacity = 1;
+
+            (function fade() {
+                if ((el.style.opacity -= 0.15) < 0) {
+                    window.scrollTo(0, 0);
+                    el.style.display = "none";
+                    controls.redraw();
+                    controls.rend();
+                    controls.start();
+                } else {
+                    requestAnimationFrame(fade);
+                }
+            })();
+        });
+    </script>
+    <script>
+        if (screen.width > 1024) {
+            function remove() {
+                var elem = document.getElementById('rlbuttn');
+                elem.parentNode.removeChild(elem);
+                return false;
+            }
+            remove();
+        }
+    </script>
+    <script>
+        var elem = document.getElementById('rlbuttn_menu');
+        if (elem != null) {
+            if (screen.width > 1024) {
+                function remove() {
+
+                    elem.parentNode.removeChild(elem);
+                    return false;
+                }
+                remove();
+            }
+        }
+    </script>
+
+    <script>
+        var elem = document.getElementById('faqbtn_rm');
+        if (elem != null) {
+            if (screen.width < 500) {
+                function remove() {
+
+                    elem.parentNode.removeChild(elem);
+                    return false;
+                }
+                remove();
+            }
+        }
+    </script>
+    <script>
+        if (screen.width > 500) {
+            function remove() {
+                var elem = document.getElementById('faq_rm');
+                elem.parentNode.removeChild(elem);
+                return false;
+            }
+            remove();
+        }
+    </script>
+    <script>
+        if (screen.width < 769) {
+            function remove() {
+                var elem = document.getElementById('seprate');
+                elem.parentNode.removeChild(elem);
+                return false;
+            }
+            remove();
+        }
+    </script>
+    <script>
+        if (screen.width > 769) {
+            function remove() {
+                var elem = document.getElementById('mobsep');
+                elem.parentNode.removeChild(elem);
+                return false;
+            }
+            remove();
+        }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="js/js.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-125190547-1');
+    </script>
+
+</body>
+
+</html>

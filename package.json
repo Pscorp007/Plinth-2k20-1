@@ -1,0 +1,56 @@
+{
+  "name": "plinth-2k19",
+  "version": "1.0.0",
+  "description": "Website for Plinth, The Techno-Management Literary Fest, The LNM Institute of Information Technology, Jaipur.",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimbus1212/plinth-2k19.git"
+  },
+  "author": "Swarnim",
+  "contributors": [
+    "Swarnim <swarnim.1212@gmail.com>",
+    "Parth Patel <17ucs107@lnmiit.ac.in>",
+    "Raj Vaibhav Dubey <17dec004@lnmiit.ac.in>",
+    "Apoorv Taneja <17uec026@lnmiit.ac.in>"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nimbus1212/plinth-2k19/issues"
+  },
+  "homepage": "https://github.com/nimbus1212/plinth-2k19#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "dateformat": "^3.0.3",
+    "debug": "^4.0.1",
+    "dotenv": "^6.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "google-auth-library": "^0.12.0",
+    "googleapis": "^23.0.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^4.13.6",
+    "mongoose-csv": "^1.1.0",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "njwt": "^0.4.0",
+    "nodemailer": "^4.6.8",
+    "nodemon": "^1.18.4",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-facebook-token": "^3.3.0",
+    "passport-google-oauth": "^1.0.0",
+    "passport-google-token": "^0.1.2",
+    "path": "^0.12.7",
+    "pdfkit": "^0.8.3",
+    "serve-favicon": "^2.5.0"
+  },
+  "engines": {
+    "node": "8.12.0"
+  }
+}

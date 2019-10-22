@@ -5,565 +5,413 @@
 
     <% include partials/head %>
     
-   
 
 </head>
 
+<nav id="navbar-menu">
+    <div class="logo-plinth">
+            <img src="./media/logo.svg" alt="Logo Image">
+    </div>
+    <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+    </div>
+    <ul class="nav-links">
+            <li><a href="#start">Home</a></li>
+            <li><a href="#intro">About</a></li>
+            <li><a href="#competition">Competitions</a></li>
+            <li><a href="#workshop">Workshops</a></li>
+            <li><a href="#talk">Talks</a></li>
+            <li><a href="#">ProShow</a></li>
+            <li><button class="login-button" href="#">Login / Register</button></li>
+            <!--<li><button class="join-button" href="#">Join</button></li>-->
+    </ul>
+</nav>
+
+<script src="nav.js"></script>
+
 <body>
 
-    <div class="preloader">
-        <div class="preloader-ring"></div>
-    </div>
-    <% include partials/header %>
-
-    <!-- Shaders -->
-    <script id="shader-fs" type="x-shader/x-fragment">
-        #ifdef GL_ES
-	    precision highp float;
-	    #endif
-	  void main(void) {
-	   gl_FragColor = vec4(0.2, 0.3, 0.4, 1.0);
-	  }
-	</script>
-    <script id="shader-vs" type="x-shader/x-vertex">
-        attribute vec3 vertexPosition;
-
-	  uniform mat4 modelViewMatrix;
-	  uniform mat4 perspectiveMatrix;
-
-	  void main(void) {
-	    gl_Position = perspectiveMatrix * modelViewMatrix * vec4(  vertexPosition, 1.0);
-	  }
-	</script>
-
-
-    <!-- three.js -->
-
-    <div id="webgl-output"></div>
-
-    <div class="bg-mask"></div>
-
-    <main id="sections">
-        <section class="section section-main" id="main" data-section="1">
-            <div class="fluid fluid--center">
-                <div class="btn-grp divDelayFoo" id="btn-grp">
-                        <div><a href="./media/Plinth_19_ Timeline_Bus_Schedule.xlsx" target="_blank"><button class='btn-live btn-side' id="ca"><p>Schedule</p></button></a></div>
-                    <div> <a href="/competitions/coding/cskaranaggarwal"><button class='btn-side' id="sch"><p>Code Sessions</p></button></a></div>
-                    <div><a href="/cryptex"><button class='btn-side' id="ca"><p>Cryptex</p></button></a></div>
-                    <div><a href="https://play.google.com/store/apps/details?id=in.plinth.plinth2019" target="_blank"><button class='btn-side' id="ca"><p>Download App</p></button></a></div>
-                    
-
-                </div>
-                <div class="int-canvas-wrap int-canvas-wrap--brain">
-                    <canvas class="int-canvas int-canvas--pt" style="margin-left:80%"></canvas>
-                </div>
-                <div class="main text-center">
-                    <div id="npt"><img src="./media/plinth2019text.png" alt="Plinth2019"></div>
-                    <h1 class="divDelay" id="txt">Techno-Management Literary Fest</h1>
-
-                </div>
-            </div>
-            <div class="hud--main hud-bottom" id="des_so">
-                <div class="fluid divDelayFoo">
-                    <span class="line"></span>
-                    <a class="hud__icon" href="https://www.facebook.com/Plinth.LNMIIT/" target="_blank" style="color:aliceblue">
-                        <i class="fab fa-facebook-f"></i>
-
-                    </a>
-                    <a class="hud__icon" href="https://twitter.com/plinthlnmiit?lang=en" target="_blank" style="color:aliceblue">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="hud__icon" href="https://www.instagram.com/plinth.lnmiit/" target="_blank" style="color:aliceblue">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="hud__icon sp" href="https://www.youtube.com/user/PlinthLNMIITJaipur" target="_blank"
-                        style="color:aliceblue;margin-left:1.5%">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <span class="hud__deadline"><span class="line"></span><span class="hud__deadline-date">19-20 JAN
-                            2019 </span></span>
-                </div>
-            </div>
-            <div class="hud--main hud-timer">
-                <div class="fluid">
-                    <div class="hud-timer__inner">
-                        <!-- <input id="hidden_date_final" type="hidden" value="2019-01-19 10:00:00"> -->
-                        <div class="hud-timer__cell hud-timer__cell--days">
-                            <span>0</span>day
-                        </div>
-                        <div class="hud-timer__cell hud-timer__cell--hours">
-                            <span>0</span>hour
-                        </div>
-                        <div class="hud-timer__cell hud-timer__cell--mins">
-                            <span>0</span>min
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section section-about" id="about" data-section="2">
-            <div class="int-canvas-wrap int-canvas-wrap--brain">
-                <canvas class="int-canvas int-canvas--brain"></canvas>
-            </div>
-            <div class="fluid fluid--center">
-                <div class="placeholder"></div>
-                <div class="about">
-                    <h3 class="about__header section-header">About Us <br class="br-1"><br class="br-2"> </h3>
-                    <div class="about__info section-description">
-                        <p class="about__text">
-                            Plinth is the annual inter college Techno-Management-Literary Festival of the LNMIIT,
-                            Jaipur.
-
-                        </p>
-                        <!-- <h5 class="about__subheader">Motto</h5> -->
-                        <p class="about__text">
-                            A bud when comes out of its cover, strives for the glow which could make it an attractive
-                            flower.
-                            So, here in Plinth as we celebrate the fifth year of its successful organization,
-                            we are proud to say that the bud found its glow in the enthusiasm and the confidence of its
-                            participants.
-                            Plinth brings immense opportunities for all the enthusiasts to showcase their talents and
-                            skills.
-                            The coalescence of all the different fields of career takes place at various corners of a
-                            single place.
-                            It starts with a typical morning that brings everyone out of their warm coziness.
-                            Ready and suited to make it grand and successful, after the long days of hard work.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="section-padding"></div>
-        </section>
-        <section class="section section--request" id="request" data-section="3">
-            <div class="section-padding"></div>
-            <div class="fluid" id="mob">
-                <h3 class="request__info-header section-header">Contact Us</h3>
-                <div class="request">
-                    <div class="request__info">
-                        <ul class="request__list">
-                            <li class="request__list-item">
-                                <h6><i class="fas fa-phone fa-rotate-90"></i>&nbsp&nbspPhone<br /></h6>
-                                Anvesh Sharma <br /> <a href="tel:+91-9460521981">+91-9460521981 <br /></a>
-                                Suyash Agrawal <br /> <a href="tel:+91-7339875167">+91-7339875167 <br /></a>
-
-                            </li>
-                            <li class="request__list-item">
-                                <h6><i class="fas fa-envelope"></i>&nbsp&nbspMail Us<br /></h6>
-                                <a href="mailto:query@plinth.in">query@plinth.in</a>
-
-                            </li>
-                            <li class="request__list-item">
-                                <h6><i class="fas fa-location-arrow"></i>&nbsp&nbspLocation<br /></h6>
-
-                                <a href="https://goo.gl/maps/5wNkk4FoFDy">Rupa ki Nangal,Via-Jamdoli,<br> Jaipur,
-                                    Rajasthan 302031 </a>
-                            </li>
-                        </ul>
-
-                        <button class="request__btn noise-btn" style="text-align:center !important" id="faqbtn_rm"><a
-                                href="/faqs"><span>FAQ</span></a></button>
-
-                    </div>
-                    <form class="request__form gform " action="https://script.google.com/macros/s/AKfycbyNgIv7o86unD2w1ugjBgQd351xubu6Ho5El08iWVmciloy83s6/exec"
-                        method="POST" data-email="query@plinth.in">
-                        <div class="form-elements">
-                            <div class="request__group">
-                                <div class="request__group-input">
-
-                                    <input class="request__input" type="text" name="name" placeholder="Name" required>
-                                </div>
-                            </div>
-
-                            <div class="request__group">
-                                <div class="request__group-input">
-
-                                    <input class="request__input" type="number" name="contact" placeholder="Mob No."
-                                        minlength="10" required>
-                                </div>
-                            </div>
-
-
-                            <div class="request__group">
-                                <div class="request__group-input">
-                                    <input class="request__input" type="email" name="email" placeholder="E-mail"
-                                        required>
-                                </div>
-                            </div>
-
-                            <div class="request__group">
-                                <div class="request__group-input">
-
-                                    <textarea class="request__textarea" name="query" rows="4" placeholder="Query"
-                                        required></textarea>
-                                </div>
-                            </div>
-                            <button class="request__form-btn noise-btn" style="text-align:center !important" type="submit"><span>Submit</span></button>
-                        </div>
-                        <div class="thankyou_message" style="display: none">
-                            <h3>Thanks for contacting us! <br> We will get back to you soon!</h3>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-            <div class="fluid" id="des">
-                <h3 class="request__info-header section-header" style="color:white">Contact Us</h3>
-                <div class="request">
-
-                    <form class="request__form gform " action="https://script.google.com/macros/s/AKfycbyNgIv7o86unD2w1ugjBgQd351xubu6Ho5El08iWVmciloy83s6/exec"
-                        method="POST" data-email="query@plinth.in">
-                        <div class="form-elements">
-                            <div class="request__group">
-                                <div class="request__group-input">
-
-                                    <input class="request__input" type="text" name="name" placeholder="Name" required>
-                                </div>
-                            </div>
-
-                            <div class="request__group">
-                                <div class="request__group-input">
-
-                                    <input class="request__input" type="number" name="contact" placeholder="Mob No."
-                                        minlength="10" required>
-                                </div>
-                            </div>
-                            <div class="request__group">
-                                <div class="request__group-input">
-                                    <input class="request__input" type="email" name="email" placeholder="E-mail"
-                                        required>
-                                </div>
-                            </div>
-
-                            <div class="request__group">
-                                <div class="request__group-input">
-
-                                    <textarea class="request__textarea" name="query" rows="4" placeholder="Query"
-                                        required></textarea>
-                                </div>
-                            </div>
-                            <button class="request__form-btn noise-btn" style="text-align:center !important" type="submit"><span>Submit</span></button>
-                        </div>
-                        <div class="thankyou_message" style="display: none;">
-                            <h3>Thanks for contacting us! <br> We will get back to you soon!</h3>
-                        </div>
-                    </form>
-
-                    <div class="request__info">
-                        <ul class="request__list">
-                            <li class="request__list-item">
-                                <h6><i class="fas fa-phone fa-rotate-90"></i>&nbsp&nbspPhone<br /></h6>
-                                Anvesh Sharma <br /> <a href="tel:+91-9460521981">+91-9460521981 <br /></a>
-                                Suyash Agrawal <br /> <a href="tel:+91-7339875167">+91-7339875167 <br /></a>
-
-                            </li>
-                            <li class="request__list-item">
-                                <h6><i class="fas fa-envelope"></i>&nbsp&nbspMail Us<br /></h6>
-                                <a href="mailto:query@plinth.in">query@plinth.in</a>
-
-                            </li>
-                            <li class="request__list-item">
-                                <h6><i class="fas fa-location-arrow"></i>&nbsp&nbspLocation<br /></h6>
-
-                                <a href="https://goo.gl/maps/5wNkk4FoFDy">Rupa ki Nangal,Via-Jamdoli,<br> Jaipur,
-                                    Rajasthan 302031 </a>
-                            </li>
-                        </ul>
-
-                        <button class="request__btn noise-btn" style="text-align:center !important" id="faqbtn_rm"><a
-                                href="/faqs"><span>FAQS</span></a></button>
-
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-    <nav class="fixed-nav">
-        <ul class="fixed-nav__list">
-            <li class="fixed-nav__list-item active">
-                <a href="#main">
-                    <span class="fixed-nav__line"></span>
-                    <span class="fixed-nav__number">00</span>
-                    <span class="fixed-nav__name">Home</span>
-                </a>
-            </li>
-            <li class="fixed-nav__list-item">
-                <a href="#about">
-                    <span class="fixed-nav__line"></span>
-                    <span class="fixed-nav__number">01</span>
-                    <span class="fixed-nav__name">About Us</span>
-                </a>
-            </li>
-            <li class="fixed-nav__list-item">
-                <a href="#request">
-                    <span class="fixed-nav__line"></span>
-                    <span class="fixed-nav__number">02</span>
-                    <span class="fixed-nav__name">Contact Us</span>
-                </a>
-            </li>
-
-        </ul>
-    </nav>
-
-    <footer style=" background: -webkit-linear-gradient(left, #090025 0%, #2f0028 100%);
-    background: -o-linear-gradient(left, #090025 0%, #2f0028 100%);
-    background: linear-gradient(to right, #090025 0%, #2f0028 100%);
-     color: aliceblue;
-          position: fixed;
-     left: 0;
-     bottom: -10px;
-     height: 50px;
-     width: 100%;">
-        <div class="hud--main hud-bottom" id="mob_so">
-            <div class="fluid divDelayFoo">
-                <span class="line"></span>
-                <a class="hud__icon" href="https://www.facebook.com/Plinth.LNMIIT/" target="_blank" style="color:aliceblue">
-                    <i class="fab fa-facebook-f"></i>
-
-                </a>
-                <a class="hud__icon" href="https://twitter.com/plinthlnmiit?lang=en" target="_blank" style="color:aliceblue">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a class="hud__icon" href="https://www.instagram.com/plinth.lnmiit/" target="_blank" style="color:aliceblue">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a class="hud__icon sp" href="https://www.youtube.com/user/PlinthLNMIITJaipur" target="_blank" style="color:aliceblue;margin-left:1.5%">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <span class="hud__deadline"><span class="line"></span><span class="hud__deadline-date">19-20 JAN
-                        2019 </span></span>
-            </div>
-        </div>
-        <div class="navbar-x divDelayFoo" class="a" id="desfoo">
-            <a class="foo " href="/gallery" class="active">GALLERY</a>
-            <a class="foo" href="/sponsors">SPONSORS</a>
-            <a class="foo" href="/team"><span class="nowarp">Our</span><span class="nowarp "> Team</span></a>
-            <a class="foo" href="/faqs" id="faq_rm">FAQS</a>
-            <span id="seprate">
-                <!-- <a class="foo" href="#request">FAQs</a> -->
-                <a class="foo" href="/terms" class="sp"><span class="nowarp">TERMS</span><span class="nowarp "> &
-                        CONDITION</span></a>
-                <a class="foo" href="/archive">ARCHIVE</a>
-            </span>
-            <span id="mobsep">
-                <a class="foo" href="/terms" class="sp"><span class="nowarp">TERMS</span><span class="nowarp "> &
-                        CONDITION</span></a>
-                <a class="foo" href="/archive">ARCHIVE</a>
-            </span>
-        </div>
-
-    </footer>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/loginscript.js"></script>
-    <script src="js/scrollmagic.js"></script>
-    <script src="js/sphere.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-    <script>
-        if (screen.width > 767) {
-            function remove() {
-                var elem = document.getElementById('npt');
-                elem.parentNode.removeChild(elem);
-
-                return false;
-            }
-            remove();
-        }
-    </script>
-    <script>
-        if (screen.width > 500) {
-            function remove() {
-                var elem = document.getElementById('des_so');
-                elem.parentNode.removeChild(elem);
-
-                return false;
-            }
-            remove();
-        }
-    </script>
-    <script>
-        if (screen.width < 500) {
-            function remove() {
-                var elem = document.getElementById('mob_so');
-                elem.parentNode.removeChild(elem);
-
-                return false;
-            }
-            remove();
-        }
-    </script>
-    <script>
-        if (screen.width < 769) {
-            function remove() {
-                var elem = document.getElementById('seprate');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-    <script>
-        if (screen.width > 769) {
-            function remove() {
-                var elem = document.getElementById('mobsep');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-    <script>
-        if (screen.width == 731 && screen.height == 411) {
-            function remove() {
-                var elem = document.getElementById('pt_ani');
-
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-
-            function remove1() {
-                var elem1 = document.getElementById('txt');
-
-                elem1.parentNode.removeChild(elem1);
-                return false;
-            }
-            remove1();
-
-        }
-    </script>
-
-    <script>
-        if (screen.width == 736 && screen.height == 414) {
-            function remove() {
-                var elem = document.getElementById('npt');
-
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-
-
-        }
-    </script>
-
-    <script>
-        if (screen.width > 1024) {
-            function remove() {
-                var elem = document.getElementById('rlbuttn');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-    <script>
-        var elem = document.getElementById('rlbuttn_menu');
-        if(elem !=null){
-            if (screen.width > 1024) {
-                function remove() {
-                    
-                    elem.parentNode.removeChild(elem);
-                    return false;
-                }
-                remove();
-            }
-        }
-        </script>
-    
-
-    <script>
-        if (screen.width < 500) {
-            function remove() {
-                var elem = document.getElementById('faqbtn_rm');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-    <script>
-        if (screen.width > 500) {
-            function remove() {
-                var elem = document.getElementById('faq_rm');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-    <script>
-        if (screen.width > 500) {
-            function remove() {
-                var elem = document.getElementById('mob');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-
-    <script>
-        if (screen.width < 500) {
-            function remove() {
-                var elem = document.getElementById('des');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-    <script>
-        if (screen.width < 769) {
-            function remove() {
-                var elem = document.getElementById('btn-grp');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-
-    <script>
-        window.addEventListener('load', function () {
-            var el = document.querySelector('.preloader');
-            el.style.opacity = 1;
-            (function fade() {
-                if ((el.style.opacity -= 0.15) < 0) {
-                    window.scrollTo(0, 0);
-                    el.style.display = "none";
-                    controls.redraw();
-                    controls.rend();
-                    controls.start();
-                } else {
-                    requestAnimationFrame(fade);
-                }
-            })();
-        });
-    </script>
-    <!-- <script>
-        $(window).on('resize', function () {
-            location.reload();
-        });
-    </script> -->
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="js/js.js"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-125190547-1');
-    </script>
-</body>
+    <!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9JNFT"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
+		
+
+
+
+		<div class="wrapper">
+
+			<nav class="navigation">
+				<ul class="navigation__list">
+					<li class="navigation__item navigation__item--active">
+						<a href="#start" title="Home">
+							<div class="navigation__icon"><span class="navigation__number">1</span></div>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#intro" title="Introduction">
+							<div class="navigation__icon"><span class="navigation__number">2</span></div>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#competition" title="Competition">
+							<div class="navigation__icon"><span class="navigation__number">3</span></div>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#workshop" title="Workshops">
+							<div class="navigation__icon"><span class="navigation__number">4</span></div>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#talk" title="Talks">
+							<div class="navigation__icon"><span class="navigation__number">5</span></div>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#magazine" title="DebSoc">
+							<div class="navigation__icon"><span class="navigation__number">6</span></div>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#testjezelf" title="ProShow">
+							<div class="navigation__icon"><span class="navigation__number">7</span></div>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#social" title="Social Media">
+							<div class="navigation__icon"><span class="navigation__number">8</span></div>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="astroid"></div>
+
+	
+
+			<section class="section section--header" id="start">
+				
+				<div class="stars"><div class="nebula"></div></div>
+				<div class="mars">
+					<div class="mars__planet"></div>
+					<div class="mars__black"></div>
+				</div>
+
+				<header class="header">
+					<div class="wrap">
+						<div class="row center-md">
+							<div class="col-md-12">
+								<div class="header__content">
+									<!-- <div class="logo logo--center"></div> -->
+									<div class="mars__logo mars__logo--center mars__logo--header">
+										<div class="logo__flare"></div>
+										<div class="logo__flare2"></div>
+									</div>
+									<h4 class="header__title header__title--center">Een leven op mars</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="header__scroll">
+						<a href="#intro" class="button button--mouse button--active"></a>
+					</div>
+				</header>
+
+			</section>
+
+			<section class="section section--intro" id="intro">
+				<div class="wrap">
+					<div class="row center-md">
+						<div class="col-md-8">
+
+							<div class="block block--intro">
+								<!-- <span class="block__caption">Plinth 2020</span> -->
+								<h1 class="block__title">Plinth 2020</h1>
+								<span class="block__caption">Techno-Management Fest, Jaipur</span>
+
 
+								<p class="block__content block__content--intro">
+										<span class="block__mark">About Us...</span>
+										Plinth is the annual inter college Techno-Management-Literary Festival of the LNMIIT, Jaipur.
+										A bud when comes out of its cover, strives for the glow which could make it an attractive flower. So, here in Plinth as we celebrate the sixth year of its successful organization, we are proud to say that the bud found its glow in the enthusiasm and the confidence of its participants. Plinth brings immense opportunities for all the enthusiasts to showcase their talents and skills. The coalescence of all the different fields of career takes place at various corners of a single place. It starts with a typical morning that brings everyone out of their warm coziness. Ready and suited to make it grand and successful, after the long days of hard work.
+								</p>
+								
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section--serie" id="competition">
+				<div class="wrap">
+					<div class="row center-md">
+						<div class="col-md-6 col-lg-7">
+							<div class="visual__wrapper">
+								<div class="visual visual--medium visual--mars-medium visual--up">
+									<canvas id="canvas1" data-imgsrc="./media/coding.jpg"></canvas>
+								</div>
+								<div class="visual visual--big visual--mars-big visual--down">
+									<canvas id="canvas5" data-imgsrc="./media/phoenix.jpg"></canvas>
+								</div>
+								<div class="visual visual--small visual--mars-small visual--up visual--fast">
+									<canvas id="canvas2" data-imgsrc="./media/robowar.jpg"></canvas>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-5 col-lg-4">
+							<div class="block">
+								<span class="block__caption block__caption--right">Some Text</span>
+								<h2 class="block__title block__title--mars">Competitions</h2>
+
+								<p class="block__content block__content--right">
+									Plinth is here again with a range of competitions of your interest. Dive in and take part in various competitions in fileds like Coding, Robotics, Astrology and MUN. You also stand a chance to win exciting prizes..  <span class="block__mark">Register Now.</span>
+									
+								</p>
+								<span class="block__caption block__caption--aligned">Get Ready on --th Januray,2020 </span>
+
+								<a href="http://mars.nationalgeographic.nl/" target="_blank" class="link link--more link--right" id="trackbutton-1">
+									<div class="button button--glitch">
+										<img class="button--glitch-1" src="http://levenopmars.natgeotv.com/nl/images/icons/icon-plus.svg">
+										<img class="button--glitch-2" src="http://levenopmars.natgeotv.com/nl/images/icons/polygon-full.svg">
+										<img class="button--glitch-3" src="http://levenopmars.natgeotv.com/nl/images/icons/polygon-full.svg">
+										<img class="button--glitch-4" src="http://levenopmars.natgeotv.com/nl/images/icons/icon-plus.svg">
+									</div>
+									<span class="link__text link__text--right" data-text="Click To know more">Click To know more</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section--landing" id="workshop">
+				<div class="wrap">
+					<div class="row center-md">
+						<div class="col-md-4">
+							<div class="block">
+								<span class="block__caption block__caption--left" style="white-space:nowrap;">some text</span>
+								<h2 class="block__title block__title--big block__title--landing">Workshops</h2>
+
+								<p class="block__content block__content--left">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis eu non diam phasellus vestibulum lorem sed. Laoreet id donec ultrices tincidunt. Elementum tempus egestas sed sed risus pretium quam vulputate. Urna id volutpat lacus laoreet non curabitur gravida arcu. 
+								</p>
+								<a href="http://www.nationalgeographic.nl/op-weg-naar-mars" target="_blank" class="link link--more link--left" id="trackbutton-2">
+									<div class="button button--left button--glitch">
+										<img class="button--glitch-1" src="http://levenopmars.natgeotv.com/nl/images/icons/icon-plus.svg">
+										<img class="button--glitch-2" src="http://levenopmars.natgeotv.com/nl/images/icons/polygon-full.svg">
+										<img class="button--glitch-3" src="http://levenopmars.natgeotv.com/nl/images/icons/polygon-full.svg">
+										<img class="button--glitch-4" src="http://levenopmars.natgeotv.com/nl/images/icons/icon-plus.svg">
+									</div>
+									<span class="link__text link__text--left link__text--aligned" data-text="Click to know more">Click to know more</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-7 first-xs last-md">
+							<div class="visual__wrapper">
+								<div class="visual visual--small visual--up visual--fast visual--exomars-small">
+									<canvas id="canvas3" data-imgsrc="./media/dossier-mars-image2.jpg"></canvas>
+								</div>
+								<div class="visual visual--big visual--down visual--exomars-big ">
+									<canvas id="canvas6" data-imgsrc="./media/dossier-mars-image1.jpg"></canvas>
+								</div>
+								<div class="visual visual--medium visual--up visual--exomars-medium">
+									<canvas id="canvas4" data-imgsrc="./media/dossier-mars-image3.jpg"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section--serie" id="talk">
+				<div class="wrap">
+					<div class="row center-md">
+						<div class="col-md-6 col-lg-7">
+							<div class="visual__wrapper">
+								<div class="visual visual--medium visual--mars-medium visual--book-medium visual--up">
+									<canvas id="canvas7" data-imgsrc="./media/mars-boek-image2.jpg"></canvas>
+								</div>
+								<div class="visual visual--big visual--mars-big visual--book-big visual--down">
+									<canvas id="canvas8" data-imgsrc="./media/mars-boek-image1.jpg"></canvas>
+								</div>
+								<div class="visual visual--small visual--mars-small visual--book-small visual--up visual visual--fast">
+									<canvas id="canvas9" data-imgsrc="./media/mars-boek-image3.jpg"></canvas>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-5 col-lg-4">
+							<div class="block">
+								<span class="block__caption block__caption--right">Some text</span>
+								<h2 class="block__title block__title--boek">Talks</h2>
+
+								<p class="block__content block__content--right">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis eu non diam phasellus vestibulum lorem sed. Laoreet id donec ultrices tincidunt. Elementum tempus egestas sed sed risus pretium quam vulputate. Urna id volutpat lacus laoreet non curabitur gravida arcu. 
+								</p>
+								<a href="http://www.natgeoshop.nl/national-geographic-mars.html" target="_blank" class="link link--more link--right" id="trackbutton-3">
+									<div class="button button--glitch">
+										<img class="button--glitch-1" src="http://levenopmars.natgeotv.com/nl/images/icons/icon-plus.svg">
+										<img class="button--glitch-2" src="http://levenopmars.natgeotv.com/nl/images/icons/polygon-full.svg">
+										<img class="button--glitch-3" src="http://levenopmars.natgeotv.com/nl/images/icons/polygon-full.svg">
+										<img class="button--glitch-4" src="http://levenopmars.natgeotv.com/nl/images/icons/icon-plus.svg">
+									</div>
+									<span class="link__text link__text--right" data-text="Click to know more">Click to know more</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section--landing" id="magazine">
+				<div class="wrap">
+					<div class="row center-md">
+						<div class="col-md-4">
+							<div class="block">
+								<span class="block__caption block__caption--left">Aboneer je nu op</span>
+								<h2 class="block__title block__title--big block__title--magazine">National<br />geographic<br/ >magazine</h2>
+
+								<p class="block__content block__content--left">
+									Verrijk jezelf met de mooiste verhalen en fotografie uit de wereld van natuur, wetenschap, geschiedenis, kunst en verre culturen. Bestel nu een abonnement op National Geographic Magazine!
+								</p>
+								<a href="http://www.natgeoservice.nl/magazine" target="_blank" class="link link--more link--left" id="trackbutton-4">
+									<div class="button button--left button--glitch">
+										<img class="button--glitch-1" src="http://levenopmars.natgeotv.com/nl/images/icons/icon-plus.svg">
+										<img class="button--glitch-2" src="http://levenopmars.natgeotv.com/nl/images/icons/polygon-full.svg">
+										<img class="button--glitch-3" src="http://levenopmars.natgeotv.com/nl/images/icons/polygon-full.svg">
+										<img class="button--glitch-4" src="http://levenopmars.natgeotv.com/nl/images/icons/icon-plus.svg">
+									</div>
+									<span class="link__text link__text--left" data-text="Abonneer je nu">Abonneer je nu</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-7 first-xs last-md">
+							<div class="visual__wrapper">
+								<div class="visual visual--small visual--exomars-small visual--magazine-small visual--up visual--fast">
+									<canvas id="canvas10" data-imgsrc="./media/mars-magazine-image2.jpg"></canvas>
+								</div>
+								<div class="visual visual--big visual--exomars-big visual--magazine-big visual--down">
+									<canvas id="canvas11" data-imgsrc="./media/mars-magazine-image1.jpg"></canvas>
+								</div>
+								<div class="visual visual--medium visual--exomars-medium visual--magazine-medium visual--up">
+									<canvas id="canvas12" data-imgsrc="./media/mars-magazine-image3.jpg"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section--serie" id="testjezelf">
+				<div class="wrap">
+					<div class="row center-md">
+						<div class="col-md-6 col-lg-7">
+							<div class="visual__wrapper">
+								<div class="visual visual--medium visual--mars-medium visual--test-medium visual--up">
+									<canvas id="canvas13" data-imgsrc="./media/mars-testjezelf-image3.jpg"></canvas>
+								</div>
+								<div class="visual visual--big visual--mars-big visual--test-big visual--down">
+									<canvas id="canvas14" data-imgsrc="./media/mars-testjezelf-image1.jpg"></canvas>
+								</div>
+								<div class="visual visual--small visual--mars-small visual--test-small visual--up visual--fast">
+									<canvas id="canvas15" data-imgsrc="./media/mars-testjezelf-image2.jpg"></canvas>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-5 col-lg-4">
+							<div class="block">
+								<span class="block__caption block__caption--right">Mars quiz</span>
+								<h2 class="block__title block__title--quiz">Test<br />jezelf</h2>
+
+								<p class="block__content block__content--right">
+									Zou jij zonder familie en vrienden kunnen? Zonder je favoriete eten? En wat doe je als je niet zo lekker in je vel zit? Kijk of jij geschikt bent om te aarden op Mars!
+								</p>
+								<a href="http://www.makemarshome.nl" target="_blank" class="link link--more link--right" id="trackbutton-5">
+									<div class="button button--glitch">
+										<img class="button--glitch-1" src="http://levenopmars.natgeotv.com/nl/images/icons/icon-plus.svg">
+										<img class="button--glitch-2" src="http://levenopmars.natgeotv.com/nl/images/icons/polygon-full.svg">
+										<img class="button--glitch-3" src="http://levenopmars.natgeotv.com/nl/images/icons/polygon-full.svg">
+										<img class="button--glitch-4" src="http://levenopmars.natgeotv.com/nl/images/icons/icon-plus.svg">
+									</div>
+									<span class="link__text link__text--right link__text--spaced" data-text="Doe de test">Doe de test</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section--social" id="social">
+				<div class="wrap">
+					<div class="row center-md">
+						<div class="col-md-5">
+							<div class="block block--social">
+								<div class="social__logo social__logo--center"></div>
+								<h3 class="social__title">Volg National Geographic Channel</h3>
+								<h4 class="social__subtitle">op social media</h4>
+
+								<ul class="social__list">
+									<li class="social__channel">
+										<a href="https://www.facebook.com/natgeonl" target="_blank" title="Facebook" class="button button--facebook button--left"></a>
+									</li>
+									<li class="social__channel">
+										<a href="https://twitter.com/nationalgeonl" target="_blank" title="Twitter" class="button button--twitter button--center"></a>
+									</li>
+									<li class="social__channel">
+										<a href="https://instagram.com/natgeotvnl" target="_blank" title="Instagram" class="button button--instagram button--right"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="cookie cookie--hidden">
+				<h4 class="cookie__title">Cookie melding</h4>
+				<p class="cookie__message">Natgeotv.com/nl gebruikt cookies onder andere om onze service te verbeteren, advertenties te personaliseren en jouw website voorkeuren te onthouden. <br /><br />Je geeft, door gebruik te blijven maken van deze website of door op “Akkoord” te klikken, toestemming voor het gebruik van cookies op de website van Natgeotv.com/nl. <a href="http://www.natgeotv.com/nl/info/cookie-policy" target="_blank" class="cookie__url">Bekijk hier</a> het cookie beleid van National Geographic Channel</p>
+				<a class="cookie__link">Akkoord</a>
+			</div>
+
+			<footer class="footer">
+				<ul class="footer__list">
+					<li class="footer__item footer__item--copyright">&copy; 2016 National Geographic</li>
+					<li class="footer__item"><a class="footer__link" href="http://www.natgeotv.com/nl/info/algemene-voorwaarden" target="_blank">Algemene voorwaarden</a></li>
+					<li class="footer__item"><a class="footer__link" href="http://www.natgeotv.com/nl/info/privacyvoorwaarden" target="_blank">Privacyvoorwaarden</a></li>
+					<li class="footer__item"><a class="footer__link" href="http://www.natgeotv.com/nl/info/cookie-policy" target="_blank">Cookiebeleid</a></li>
+					<li class="footer__item footer__item--right">
+						<div class="logo"></div>
+					</li>
+				</ul>
+			</footer>
+		</div>
+
+			<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous" defer></script>
+			<script src="js/libs/tweenmax.min.js" defer></script>
+			<script src="js/main.min.js" defer></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+		$(window).scroll(function() {
+			if ($(document).scrollTop() > 100) {
+				console.log("ahkdsj");
+				$("#navbar-menu").addClass("color-change");
+			} else {
+				$("#navbar-menu").removeClass("color-change");
+			}
+		});
+
+
+		</script>
+			
+	</body>
 </html>

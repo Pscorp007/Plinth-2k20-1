@@ -13,7 +13,7 @@ var authenticate = require('./authenticate');
 // database connect
 var DBconfig = require('./config/dbconfig')
 mongoose.Promise = global.Promise;
-mongoose.connect(DBconfig.url, { useMongoClient: true });
+mongoose.connect('mongodb://localhost/plinth19', { useMongoClient: true });
 var db = mongoose.connection;
 db.on('error',console.error.bind(console, 'connection error:'));
 db.once('open', function(){

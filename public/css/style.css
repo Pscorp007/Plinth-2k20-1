@@ -2719,7 +2719,7 @@ p {
 	display: block;
 	width: 366px;
 	height: 161px;
-	background: url("images/Header/astroid.png") center center no-repeat;
+	background: url("./media/Header/astroid.png") center center no-repeat;
 	top: -50vh;
 	right: -50vw;
 	z-index: 10;
@@ -3173,7 +3173,7 @@ body.ready .navigation {
 }
 
 .social__logo {
-	background-image: url("images/natgeo-logo.svg");
+	background-image: url("./media/natgeo-logo.svg");
 	background-size: cover;
 	width: 74px;
 	height: 106px;
@@ -3216,7 +3216,7 @@ body.ready .navigation {
 }
 
 .logo {
-	background-image: url("images/natgeo-logo-text.png");
+	background-image: url("./media/natgeo-logo-text.png");
 	background-size: cover;
 	width: 13.5rem;
 	height: 4rem;
@@ -3247,7 +3247,7 @@ body.ready .logo {
 }
 
 .mars__planet {
-	background-image: url("images/Header/mars-planet.png");
+	background-image: url("./media/Header/mars-planet.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: block;
@@ -3314,7 +3314,7 @@ body.ready .mars__black {
 }
 
 .mars__logo {
-	background-image: url("images/Header/logo-mars1.png");
+	background-image: url("./media/Header/logo-mars1.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 30rem;
@@ -4007,7 +4007,7 @@ body.ready .mars__logo {
 .button--twitter:hover:after,
 .button--instagram:hover:after {
 	content: '';
-	background-image: url("images/Icons/polygon-extend.svg");
+	background-image: url("./media/Icons/polygon-extend.svg");
 	background-repeat: no-repeat;
 	width: 9.2rem;
 	height: 8.5rem;
@@ -4029,7 +4029,7 @@ body.ready .mars__logo {
 }
 
 .button--twitter:before {
-	content: url("images/Icons/icon-tw.svg");
+	content: url("./media/Icons/icon-tw.svg");
 }
 
 .button--instagram:before {
@@ -4201,7 +4201,7 @@ keyframes noise-anim 100% {
 
 .stars {
 	position: fixed;
-	background-image: url("images/background.jpg");
+	background-image: url("./media/background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -4290,7 +4290,7 @@ body.ready .stars {
 	border: 2px solid #fff;
 	text-transform: uppercase;
 	font-family: "NGC-CondBold", sans-serif;
-	background-image: url("images/icons/checkmark-white.svg");
+	background-image: url("./media/icons/checkmark-white.svg");
 	background-repeat: no-repeat;
 	background-position: 20px center;
 }
@@ -4306,7 +4306,7 @@ body.ready .stars {
 	top: 0;
 	width: 785px;
 	height: 692px;
-	background: url("images/Header/nebula.png") top right no-repeat;
+	background: url("./media/Header/nebula.png") top right no-repeat;
 	background-size: contain;
 	opacity: 0.6;
 	z-index: -1;

@@ -5,7 +5,7 @@ var GoogleValidate = require('passport-google-token').Strategy;
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var User = require('./schema/user');
 var configAuth = require('./config/auth');
- 
+
 passport.serializeUser(function (user, done) {
 	done(null, user.id);
 });
@@ -33,7 +33,7 @@ exports.google = passport.use(new GoogleStrategy({
 					if(user.googleid == ''){
 						user.googleid = profile.id;
 						user.googletoken = accessToken;
-						
+
 						user.save(function (err) {
 							if (err) {
 								console.log(err); // handle errors!
@@ -45,8 +45,8 @@ exports.google = passport.use(new GoogleStrategy({
 					} else {
 						done(null, user);
 					}
-					
-				
+
+
 				} else {
 					user = new User();
 					user.googleid = profile.id;
@@ -54,7 +54,7 @@ exports.google = passport.use(new GoogleStrategy({
 					user.name = profile.name.givenName + ' ' + profile.name.familyName;
 					user.email = profile.emails[0].value; // pull the first email
 					user.valid = false;
-	
+
 					user.save(function (err) {
 						if (err) {
 							console.log(err); // handle errors!
@@ -66,7 +66,7 @@ exports.google = passport.use(new GoogleStrategy({
 				}
 			});
 		});
-	
+
 	})
 );
 
@@ -88,7 +88,7 @@ exports.facebook = passport.use(new FacebookStrategy({
 					if(user.facebookid == ''){
 						user.facebookid = profile.id;
 						user.facebooktoken = accessToken;
-						
+
 						user.save(function (err) {
 							if (err) {
 								console.log(err); // handle errors!
@@ -148,4 +148,4 @@ exports.googleValidate = passport.use(new GoogleValidate({
 		}
 		return done(err, profile);
 	}
-)); 
+));

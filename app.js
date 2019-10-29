@@ -7,13 +7,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
-var authenticate = require('./authenticate');
+//var authenticate = require('./authenticate');
 
 
 // database connect
 var DBconfig = require('./config/dbconfig')
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/plinth19', { useMongoClient: true });
+mongoose.connect('mongodb+srv://Plinth:Plinth123@plinthtestingcluster-puawu.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser:true ,useCreateIndex:true });
 var db = mongoose.connection;
 db.on('error',console.error.bind(console, 'connection error:'));
 db.once('open', function(){

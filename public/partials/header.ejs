@@ -1,196 +1,28 @@
-<div class="menu">
-    <div class="fluid">
-        <ul class="menu-list">
-            <li class="menu-list-item" <%if(page=="home" ){%>class="pg-active"
-                <%}%>>
-                <a class="text-code-hover-feel" href="/">home</a></li>
-            <li class="menu-list-item" <%if(page=="competitions" ){%>class="pg-active"
-                <%}%>>
-                <a class="text-code-hover-feel" href="/competitions">competitions</a></li>
-            <li class="menu-list-item" <%if(page=="workshops" ){%>class="pg-active"
-                <%}%>>
-                <a class="text-code-hover-feel" href="/workshops">workshops</a></li>
-            <li class="menu-list-item" <%if(page=="mun" ){%>class="pg-active"
-                <%}%>>
-                <a class="text-code-hover-feel" href="/mun">mun</a></li>
-            <li class="menu-list-item" <%if(page=="talks" ){%>class="pg-active"
-                <%}%>>
-                <a class="text-code-hover-feel" href="/talks">talks</a></li>
-            <li class="menu-list-item" <%if(page=="talks" ){%>class="pg-active"
-                <%}%>>
-                <a class="text-code-hover-feel" href="/proshow">proshow</a></li>
-            <li class="menu-list-item" <%if(page=="proshow" ){%>class="pg-active"
-                <%}%>>
-
-                <a class="text-code-hover-feel" href="/cryptex">Cryptex</a></li>
-            <li class="menu-list-item">
-                <a class="text-code-hover-feel" href="../media/Plinth_19_ Timeline_Bus_Schedule.xlsx" target="_blank">Schedule</a></li>
-            <!-- <li class="menu-list-item" <%if(page=="sop" ){%>class="pg-active"
-                <%}%>>
-                <a class="text-code-hover-feel" href="/sop">sop</a></li> -->
-        </ul>
-    </div>
-    <div class="hud-bottom">
-        <div class="fluid">
-            <span class="line"></span>
-            <a class="hud__icon" href="https://www.facebook.com/Plinth.LNMIIT/" style="color:aliceblue" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a class="hud__icon" href="https://twitter.com/plinthlnmiit?lang=en" style="color:aliceblue" target="_blank">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a class="hud__icon" href="https://www.instagram.com/plinth.lnmiit/" style="color:aliceblue" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a class="hud__icon sp" href="https://www.youtube.com/user/PlinthLNMIITJaipur" style="color:aliceblue;margin-left:1.5%"
-                target="_blank">
-
-                <i class="fab fa-youtube"></i>
-            </a>
-            <span class="hud__deadline"><span class="line"></span><span class="hud__deadline-date">19-20 JAN 2019</span></span>
-        </div>
-    </div>
-    <div class="hud-timer">
-        <div class="fluid">
-            <div class="hud-timer__inner">
-                <div class="hud-timer__cell hud-timer__cell--days">
-                    <span>0</span>day
-                </div>
-                <div class="hud-timer__cell hud-timer__cell--hours">
-                    <span>0</span>hour
-                </div>
-                <div class="hud-timer__cell hud-timer__cell--mins">
-                    <span>0</span>min
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<button class="hamburger hamburger--spin" type="button">
-    <span class="hamburger-box">
-        <span class="hamburger-text">Мenu</span>
-        <span class="hamburger-inner"></span>
-    </span>
-</button>
-
-<header class="header">
-    <div class="fluid">
-        <div class="header__inner">
-
-            <a class="header__logo header__logo--light" href="/">
-                <img class="rimg" id="ele1" src="../media/logo.svg" alt="plinth2k19">
-
-            </a>
-
-            <% if(isLoggedIn){ %>
-            <ul class="header__nav">
-                <li class="nav-item dropdown" id="rlbuttn_menu">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Hi,
-                        <%- user.name %>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                        <a class="dropdown-item" href="/profile">Profile</a>
-
-
-                        <a class="dropdown-item" href="/user/logout">LogOut</a>
-
-                    </div>
-                </li>
-                <% } else { %>
-
-                <button class="regi_lo" id="rlbuttn" data-toggle="modal" data-target="#exampleModalCenter">Login|Register</button>
-                <% } %>
-            </ul>
-
-            <nav>
-                <ul class="header__nav">
-                    <li <%if(page=="home" ){%>class="pg-active"
-                        <%}%>>
-                        <a class="text-code-hover-feel" href="/">home</a><span></span></li>
-                    <li <%if(page=="competitions" ){%>class="pg-active"
-                        <%}%>>
-                        <a class="text-code-hover-feel" href="/competitions">competitions</a><span></span></li>
-                    <li <%if(page=="workshops" ){%>class="pg-active"
-                        <%}%>>
-                        <a class="text-code-hover-feel" href="/workshops">workshops</a><span></span></li>
-                    <li <%if(page=="mun" ){%>class="pg-active"
-                        <%}%>>
-                        <a class="text-code-hover-feel" href="/mun">mun</a><span></span></li>
-                    <li <%if(page=="talks" ){%>class="pg-active"
-                        <%}%>>
-                        <a class="text-code-hover-feel" href="/talks">talks</a><span></span></li>
-                    <li <%if(page=="proshow" ){%>class="pg-active"
-                        <%}%>>
-                        <a class="text-code-hover-feel" href="/proshow">proshow</a><span></span></li>
-                    <% if(isLoggedIn){ %>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Hi,
-                            <%- user.name %>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                            <a class="dropdown-item" href="/profile">Profile</a>
-
-
-                            <a class="dropdown-item" href="/user/logout">LogOut</a>
-
-                        </div>
-                    </li>
-
-                    <% } else { %>
-
-                    <li><a data-toggle="modal" data-target="#exampleModalCenter" style="color:#fff">Login | Register</a><span></span></li>
-                    <% } %>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title w-100 text-center" id="exampleModalLongTitle">Register Yourself</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body text-center">
-                <p>Register yourself for different competitions through this portal to know further details and
-                    proceedings of PLINTH'19.
-                    Morever if you register through this platform , you would be able to get exclusive coupons
-                    and offers.
-
-                </p>
-            </div>
-            <div class="modal-footer">
-                <div class="col-sm-6 text-left">
-                    <a onclick='userLoginInitiate("/user/auth/google")'><button type="button" class="btn btn-outline-primary "><img
-                                class="g_icon" src="../media/g_icon.png">
-                            &nbspGoogle</button></a>
-                </div>
-                <div class="col-sm-6 text-right">
-                    <a onclick='userLoginInitiate("/user/auth/facebook")'><button type="button" class="btn btn-outline-primary"><img
-                                class="f_icon" src="../media/f_icon.png">
-                            &nbspFacebook</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="fixed-logo">
-    <div class="fluid">
-        <a class="header__logo" href="#main">
-            <img class="rimg" src="../media/logo.svg" alt="Plinth">
-        </a>
-    </div>
-</div>
+<nav id="navbar-menu">
+	<div class="logo-plinth">
+			<a href="/"><img src="./media/logo.svg" alt="Logo Image"></a>
+	</div>
+	<div class="hamburger">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+	</div>
+	<ul class="nav-links">
+			<li class="different"><a href="/">Home</a></li>
+			<li class="different"><a href="#intro">About</a></li>
+			<li class="different"><a href="/competitions">Competitions</a></li>
+			<li class="different"><a href="/workshops">Workshops</a></li>
+			<li class="different"><a href="/talks">Talks</a></li>
+			<li class="different"><a href="/mun">DebSoc</a></li>
+			<li class="different"><a href="/proshow">ProShow</a></li>
+			<li class="different"><a href="/cryptex">Cryptex</a></li>
+			<% if(isLoggedIn){ %>
+				<!-- <li><button class="login-button" href="#">Login / Register</button></li> -->
+			<% } else { %>
+				<li><button class="login-button" href="#">Login / Register</button></li>
+			<% } %>
+			<!-- <li><button class="login-button" href="#">Login / Register</button></li> -->
+			<!--<li><button class="join-button" href="#">Join</button></li>-->
+	</ul>
+</nav>
+<script src="nav.js"></script>

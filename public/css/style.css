@@ -2147,9 +2147,12 @@ body {
 	float: left;
 	width: 100%;
 	padding: 0 5rem;
-	margin: 0 0 2.5rem 0;
-	position: relative;
-	z-index: 1;
+	margin: 20rem 0 0 0;
+
+	-webkit-transition: background-color 1000ms linear;
+	position: fixed;
+	bottom: 0;
+	z-index: 7;
 }
 
 .footer__list {
@@ -2158,14 +2161,15 @@ body {
 	padding: 0;
 	float: left;
 	width: 100%;
+	margin: 0.5rem 0 0.5rem 0;
 }
 
 .footer__item {
 	font-family: "NGC-CondBold", sans-serif;
-	font-size: 2rem;
+	font-size: 1.75rem;
 	text-transform: uppercase;
 	float: left;
-	line-height: 4rem;
+	line-height: 3rem;
 	padding: 0 1rem;
 }
 
@@ -2178,9 +2182,19 @@ body {
 
 @media screen and (max-width: 48em) {
 	.footer__item {
-		width: 100%;
+		width: 25%;
+		font-size: 1.3rem;
+		line-height: 1.8rem;
 	}
 }
+
+/*@media screen and (max-width: 48em) {
+	.footer__link {
+		font-size: 0.5rem;
+		width: 100%;
+		overflow: hidden;
+	}
+}*/
 
 .footer__item:first-of-type {
 	padding: 0 2rem 0 4rem;
@@ -2211,7 +2225,7 @@ body {
 
 .footer__item--right {
 	float: right;
-	margin: 0 10rem 0 0;
+	margin: 0 4rem 0 0;
 }
 
 @media screen and (max-width: 62em) {
@@ -2220,8 +2234,15 @@ body {
 		width: 100%;
 		text-align: center;
 	}
-	.footer__item--right .logo {
-		margin: 30px auto;
+}
+
+@media screen and (max-width: 48em) {
+	.footer__item--right {
+		padding-left: 2rem;
+		padding-right: 0rem;
+		width: 75%;
+		text-align: right;
+		margin: 0;
 	}
 }
 
@@ -2263,6 +2284,12 @@ body {
 }
 
 @media (max-height: 450px) {
+	.header__scroll {
+		display: none;
+	}
+}
+
+@media (max-width: 48em) {
 	.header__scroll {
 		display: none;
 	}
@@ -2747,7 +2774,7 @@ p {
 .navigation {
 	z-index: 99;
 	position: fixed;
-	margin: 10rem 0 0 5rem;
+	margin: 22.5rem 0 0 5rem;
 	display: none;
 	opacity: 0;
 	transition: opacity 500ms;
@@ -2941,6 +2968,7 @@ body.ready .navigation {
 	position: relative;
 	width: 100%;
 	z-index: 2;
+	margin-bottom: 20rem;
 }
 
 .block--intro,
@@ -3160,7 +3188,7 @@ body.ready .navigation {
 
 .block__mark {
 	font-family: "NGC-CondBold", sans-serif;
-	font-size: 2rem;
+	font-size: 3.5rem;
 	text-transform: uppercase;
 	color: #c46b16;
 	opacity: 0.8;
@@ -3211,8 +3239,8 @@ body.ready .navigation {
 }
 
 .social__channel {
-	float: left;
-	width: 33.33%;
+	float: right;
+	width: 25%;
 }
 
 .logo {
@@ -3995,47 +4023,6 @@ body.ready .mars__logo {
 	z-index: 10;
 }
 
-.button--facebook:before,
-.button--twitter:before,
-.button--instagram:before {
-	position: relative;
-	top: 22px;
-	display: inline-block;
-}
-
-.button--facebook:hover:after,
-.button--twitter:hover:after,
-.button--instagram:hover:after {
-	content: '';
-	background-image: url("./media/Icons/polygon-extend.svg");
-	background-repeat: no-repeat;
-	width: 9.2rem;
-	height: 8.5rem;
-	position: absolute;
-	left: -12px;
-	top: -12px;
-	animation-name: zoomIn;
-	animation-iteration-count: 1;
-	animation-duration: .3s;
-	animation-delay: 0s;
-	animation-timing-function: ease;
-	animation-fill-mode: both;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.button--facebook:before {
-	content: url("http://levenopmars.natgeotv.com/nl/images/Icons/icon-fb.svg");
-}
-
-.button--twitter:before {
-	content: url("./media/Icons/icon-tw.svg");
-}
-
-.button--instagram:before {
-	content: url("http://levenopmars.natgeotv.com/nl/images/Icons/icon-ig.svg");
-}
-
 .button--left {
 	float: left;
 }
@@ -4228,9 +4215,9 @@ body.ready .stars {
 }
 
 .cookie {
-	width: 780px;
+	width: 720px;
 	max-width: 90%;
-	height: 480px;
+	height: 360px;
 	max-height: 95%;
 	position: fixed;
 	bottom: 0;
@@ -4283,7 +4270,7 @@ body.ready .stars {
 	cursor: pointer;
 	line-height: 15px;
 	height: 40px;
-	padding: 10px 20px 10px 50px;
+	padding: 10px 10px 10px 10px;
 	margin-top: 10px;
 	font-size: 1.6rem;
 	letter-spacing: .1em;
@@ -4293,6 +4280,7 @@ body.ready .stars {
 	background-image: url("./media/icons/checkmark-white.svg");
 	background-repeat: no-repeat;
 	background-position: 20px center;
+	text-align: center;
 }
 
 .cookie__url {
@@ -4310,4 +4298,69 @@ body.ready .stars {
 	background-size: contain;
 	opacity: 0.6;
 	z-index: -1;
+}
+
+.social-link {
+	text-decoration: none;
+}
+
+.facebook-link {
+	height: 2rem;
+	width: 2rem;
+	margin-right: 2rem;
+	text-decoration: none;
+	cursor: pointer;
+	color: white;
+	transition: color 0.25s ease-in;
+}
+
+.twitter-link {
+	height: 2rem;
+	width: 2rem;
+	margin-right: 2rem;
+	text-decoration: none;
+	color: white;
+	transition: color 0.25s ease-in;
+}
+.instagram-link {
+	height: 2rem;
+	width: 2rem;
+	margin-right: 2rem;
+	text-decoration: none;
+	color: white;
+	transition: color 0.25s ease-in;
+}
+
+.youtube-link {
+	height: 2rem;
+	width: 2rem;
+	margin-right: 2rem;
+	text-decoration: none;
+	color: white;
+	transition: color 0.25s ease-in;
+}
+
+.fa-youtube-play:hover {
+	color: #c46b16 !important;
+	transition: color 0.35s ease-in;
+}
+
+.fa-facebook-official:hover {
+	color: #c46b16 !important;
+	transition: color 0.35s ease-in;
+}
+
+.fa-twitter-square:hover {
+	color: #c46b16 !important;
+	transition: color 0.35s ease-in;
+}
+
+.fa-instagram:hover {
+	color: #c46b16 !important;
+	transition: color 0.35s ease-in;
+}
+
+.color-change2 {
+	background: url("./media/star.jpg") !important;
+	-webkit-transition: background-color 1200ms linear;
 }

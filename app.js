@@ -13,7 +13,8 @@ var passport = require('passport');
 // database connect
 var DBconfig = require('./config/dbconfig')
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://Plinth:Plinth123@plinthtestingcluster-puawu.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser:true ,useCreateIndex:true });
+// mongoose.connect('mongodb+srv://Plinth:Plinth123@plinthtestingcluster-puawu.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser:true ,useCreateIndex:true });
+mongoose.connect('mongodb://localhost/plinth19', { useMongoClient: true,useCreateIndex:true,useUnifiedTopology:true});
 var db = mongoose.connection;
 db.on('error',console.error.bind(console, 'connection error:'));
 db.once('open', function(){
@@ -96,5 +97,7 @@ if (app.get('env') === 'development') {
 		res.redirect('/');
 	});
 }
-
+app.listen("3000",process.env.IP,function(){
+    console.log(" Server has started!");
+});
 module.exports = app;

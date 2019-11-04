@@ -1,58 +1,35 @@
-<div class="hud--main hud-bottom" id="jst">
-    <div class="fluid">
-        <span class="line"></span>
-        <a class="hud__icon" href="https://www.facebook.com/Plinth.LNMIIT/" target="_blank" style="color:aliceblue">
-            <i class="fab fa-facebook-f"></i>
-
-        </a>
-        <a class="hud__icon" href="https://twitter.com/plinthlnmiit?lang=en" target="_blank" style="color:aliceblue">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a class="hud__icon" href="https://www.instagram.com/plinth.lnmiit/" target="_blank" style="color:aliceblue">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a class="hud__icon sp" href="https://www.youtube.com/user/PlinthLNMIITJaipur" target="_blank" style="color:aliceblue;margin-left:1.5%">
-            <i class="fab fa-youtube"></i>
-        </a>
-        <span class="hud__deadline"><span class="line"></span><span class="hud__deadline-date">19-20 JAN
-                2019 </span></span>
-    </div>
-</div>
-<footer style="background: -webkit-linear-gradient(left, #090025 0%, #2f0028 100%);
-    background: -o-linear-gradient(left, #090025 0%, #2f0028 100%);
-    background: linear-gradient(to right, #090025 0%, #2f0028 100%);
-    color: aliceblue;
-    text-align:center;
-    position: fixed;
-    left: 0;
-    bottom: -10px;
-    height: 50px;
-    width: 100%;">
-    <div class="navbar-x" class="a" id="desfoo">
-        <a <%if(page=="gallery" ){%>class="pg-active"
-            <%}%> class="foo" href="/gallery" class="active">GALLERY</a>
-        <a <%if(page=="sponsors" ){%>class="pg-active"
-            <%}%> class="foo" href="/sponsors">SPONSORS</a>
-        <a <%if(page=="team" ){%>class="pg-active"
-            <%}%> class="foo" href="/team"><span class="nowarp">Our</span><span class="nowarp "> Team</span></a>
-        <a <%if(page=="faqs" ){%>class="pg-active"
-            <%}%>class="foo" href="/faqs" id="faq_rm">FAQS</a>
-        <span id="seprate">
-            <!-- <a <%if(page=="faqs" ){%>class="pg-active"
-                <%}%> class="foo" href="/faqs">FAQs</a> -->
-            <a <%if(page=="terms" ){%>class="pg-active"
-                <%}%>class="foo" href="/terms" class="sp"><span class="nowarp">TERMS</span><span class="nowarp "> &
-                    CONDITION</span></a>
-            <a <%if(page=="archive" ){%>class="pg-active"
-                <%}%> class="foo" href="/archive">ARCHIVE</a>
-        </span>
-        <span id="mobsep">
-            <a <%if(page=="terms" ){%>class="pg-active"
-                <%}%>class="foo" href="/terms" class="sp"><span class="nowarp">TERMS</span><span class="nowarp "> &
-                    CONDITION</span></a>
-            <a <%if(page=="archive" ){%>class="pg-active"
-                <%}%>class="foo" href="/archive">ARCHIVE</a>
-        </span>
+<div class="cookie cookie--hidden">
+    <h4 class="cookie__title">Cookie notification</h4>
+    <p class="cookie__message">Plinth.in uses cookies to improve your service, to personalize advertisements and to remember your website preferences. <br /> <br /> By continuing to use this website or by clicking “Agree”, you consent to the use of cookies on the plinth.in website. 
+        <br><br><!--<a href="http://www.natgeotv.com/nl/info/cookie-policy" target="_blank" class="cookie__url">Bekijk hier</a> het cookie beleid van National Geographic Channel   </p>-->
+    <a class="cookie__link">Agree</a>
     </div>
 
+<footer class="footer" id="social">
+    <ul class="footer__list">
+        <li class="footer__item"><a class="footer__link" href="/terms" >Terms & Conditions</a></li>
+        <li class="footer__item"><a class="footer__link" href="/sponsors" >Sponsors</a></li>
+        <li class="footer__item"><a class="footer__link" href="/faqs" >Gallery</a></li>
+        <li class="footer__item"><a class="footer__link" href="/team" >Our Team</a></li>
+        <li class="footer__item footer__item--right">
+            <div class="social-link">
+
+                    <a class="facebook-link" href="https://www.facebook.com/Plinth.LNMIIT/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                    <a class="twitter-link" href="https://twitter.com/plinthlnmiit?lang=en" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    <a class="instagram-link" href="https://www.instagram.com/plinth.lnmiit/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a class="youtube-link" href="https://www.youtube.com/user/PlinthLNMIITJaipur" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></i></a>
+                
+                
+            </div>
+        </li>
+    </ul>
 </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous" defer></script>
+<script src="js/libs/tweenmax.min.js" defer></script>
+<script src="js/main.min.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+

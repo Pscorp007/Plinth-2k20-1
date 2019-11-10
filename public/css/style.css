@@ -1992,111 +1992,111 @@
 
 @font-face {
 	font-family: 'Quantico-Regular';
-	src: url("fonts/Quantico/Quantico-Regular.woff2") format("woff2"),
-		url("fonts/Quantico/Quantico-Regular.woff") format("woff"), url("fonts/Quantico/Quantico-Regular.ttf") format("truetype");
+	src: url("./fonts/Quantico/Quantico-Regular.woff2") format("woff2"),
+		url("./fonts/Quantico/Quantico-Regular.woff") format("woff"), url("./fonts/Quantico/Quantico-Regular.ttf") format("truetype");
 	font-style: italic;
 	font-weight: 400;
 }
 
 @font-face {
 	font-family: 'Quantico-Italic';
-	src: url("fonts/Quantico/Quantico-Italic.woff2") format("woff2"), url("fonts/Quantico/Quantico-Italic.woff") format("woff"),
-		url("fonts/Quantico/Quantico-Italic.ttf") format("truetype");
+	src: url("./fonts/Quantico/Quantico-Italic.woff2") format("woff2"), url("./fonts/Quantico/Quantico-Italic.woff") format("woff"),
+		url("./fonts/Quantico/Quantico-Italic.ttf") format("truetype");
 	font-style: italic;
 	font-weight: 400;
 }
 
 @font-face {
 	font-family: 'Quantico-BoldItalic';
-	src: url("fonts/Quantico/Quantico-BoldItalic.woff2") format("woff2"),
-		url("fonts/Quantico/Quantico-BoldItalic.woff") format("woff"),
-		url("fonts/Quantico/Quantico-BoldItalic.ttf") format("truetype");
+	src: url("./fonts/Quantico/Quantico-BoldItalic.woff2") format("woff2"),
+		url("./fonts/Quantico/Quantico-BoldItalic.woff") format("woff"),
+		url("./fonts/Quantico/Quantico-BoldItalic.ttf") format("truetype");
 	font-style: italic;
 	font-weight: 700;
 }
 
 @font-face {
 	font-family: 'Quantico-Bold';
-	src: url("fonts/Quantico/Quantico-Bold.woff2") format("woff2"), url("fonts/Quantico/Quantico-Bold.woff") format("woff"),
-		url("fonts/Quantico/Quantico-Bold.ttf") format("truetype");
+	src: url("./fonts/Quantico/Quantico-Bold.woff2") format("woff2"), url("./fonts/Quantico/Quantico-Bold.woff") format("woff"),
+		url("./fonts/Quantico/Quantico-Bold.ttf") format("truetype");
 	font-weight: 700;
 }
 
 @font-face {
 	font-family: 'Rajdhani-Light';
-	src: url("fonts/Rajdhani/Rajdhani-Light.woff2") format("woff2"), url("fonts/Rajdhani/Rajdhani-Light.woff") format("woff"),
-		url("fonts/Rajdhani/Rajdhani-Light.ttf") format("truetype");
+	src: url("./fonts/Rajdhani/Rajdhani-Light.woff2") format("woff2"), url("./fonts/Rajdhani/Rajdhani-Light.woff") format("woff"),
+		url("./fonts/Rajdhani/Rajdhani-Light.ttf") format("truetype");
 	font-weight: 300;
 }
 
 @font-face {
 	font-family: 'Rajdhani-Regular';
-	src: url("fonts/Rajdhani/Rajdhani-Regular.woff2") format("woff2"),
-		url("fonts/Rajdhani/Rajdhani-Regular.woff") format("woff"), url("fonts/Rajdhani/Rajdhani-Regular.ttf") format("truetype");
+	src: url("./fonts/Rajdhani/Rajdhani-Regular.woff2") format("woff2"),
+		url("./fonts/Rajdhani/Rajdhani-Regular.woff") format("woff"), url("./fonts/Rajdhani/Rajdhani-Regular.ttf") format("truetype");
 	font-weight: 400;
 }
 
 @font-face {
 	font-family: 'Rajdhani-Medium';
-	src: url("fonts/Rajdhani/Rajdhani-Medium.woff2") format("woff2"), url("fonts/Rajdhani/Rajdhani-Medium.woff") format("woff"),
-		url("fonts/Rajdhani/Rajdhani-Medium.ttf") format("truetype");
+	src: url("./fonts/Rajdhani/Rajdhani-Medium.woff2") format("woff2"), url("./fonts/Rajdhani/Rajdhani-Medium.woff") format("woff"),
+		url("./fonts/Rajdhani/Rajdhani-Medium.ttf") format("truetype");
 	font-weight: 500;
 }
 
 @font-face {
 	font-family: 'Rajdhani-SemiBold';
-	src: url("fonts/Rajdhani/Rajdhani-SemiBold.woff2") format("woff2"),
-		url("fonts/Rajdhani/Rajdhani-SemiBold.woff") format("woff"),
-		url("fonts/Rajdhani/Rajdhani-SemiBold.ttf") format("truetype");
+	src: url("./fonts/Rajdhani/Rajdhani-SemiBold.woff2") format("woff2"),
+		url("./fonts/Rajdhani/Rajdhani-SemiBold.woff") format("woff"),
+		url("./fonts/Rajdhani/Rajdhani-SemiBold.ttf") format("truetype");
 	font-weight: 600;
 }
 
 @font-face {
 	font-family: 'Rajdhani-Bold';
-	src: url("fonts/Rajdhani/Rajdhani-Bold.woff2") format("woff2"), url("fonts/Rajdhani/Rajdhani-Bold.woff") format("woff"),
-		url("fonts/Rajdhani/Rajdhani-Bold.ttf") format("truetype");
+	src: url("./fonts/Rajdhani/Rajdhani-Bold.woff2") format("woff2"), url("./fonts/Rajdhani/Rajdhani-Bold.woff") format("woff"),
+		url("./fonts/Rajdhani/Rajdhani-Bold.ttf") format("truetype");
 	font-weight: 700;
 }
 
 @font-face {
 	font-family: 'NGC-Light';
-	src: url("fonts/NGC/NGCDINOnAir-Light.woff2") format("woff2"), url("fonts/NGC/NGCDINOnAir-Light.woff") format("woff"),
-		url("fonts/NGC/NGCDINOnAir-Light.ttf") format("truetype");
+	src: url("./fonts/NGC/NGCDINOnAir-Light.woff2") format("woff2"), url("./fonts/NGC/NGCDINOnAir-Light.woff") format("woff"),
+		url("./fonts/NGC/NGCDINOnAir-Light.ttf") format("truetype");
 	font-weight: 200;
 }
 
 @font-face {
 	font-family: 'NGC-Medium';
-	src: url("fonts/NGC/NGCDINOnAir-Medium.woff2") format("woff2"), url("fonts/NGC/NGCDINOnAir-Medium.woff") format("woff"),
-		url("fonts/NGC/NGCDINOnAir-Medium.ttf") format("truetype");
+	src: url("./fonts/NGC/NGCDINOnAir-Medium.woff2") format("woff2"), url("./fonts/NGC/NGCDINOnAir-Medium.woff") format("woff"),
+		url("./fonts/NGC/NGCDINOnAir-Medium.ttf") format("truetype");
 	font-weight: 300;
 }
 
 @font-face {
 	font-family: 'NGC-Regular';
-	src: url("fonts/NGC/NGCDINOnAir-Regular.woff2") format("woff2"), url("fonts/NGC/NGCDINOnAir-Regular.woff") format("woff"),
-		url("fonts/NGC/NGCDINOnAir-Regular.ttf") format("truetype");
+	src: url("./fonts/NGC/NGCDINOnAir-Regular.woff2") format("woff2"), url("./fonts/NGC/NGCDINOnAir-Regular.woff") format("woff"),
+		url("./fonts/NGC/NGCDINOnAir-Regular.ttf") format("truetype");
 	font-weight: 400;
 }
 
 @font-face {
 	font-family: 'NGC-CondBold';
-	src: url("fonts/NGC/NGCDINOnAir-CondBold.woff2") format("woff2"), url("fonts/NGC/NGCDINOnAir-CondBold.woff") format("woff"),
-		url("fonts/NGC/NGCDINOnAir-CondBold.ttf") format("truetype");
+	src: url("./fonts/NGC/NGCDINOnAir-CondBold.woff2") format("woff2"), url("./fonts/NGC/NGCDINOnAir-CondBold.woff") format("woff"),
+		url("./fonts/NGC/NGCDINOnAir-CondBold.ttf") format("truetype");
 	font-weight: 500;
 }
 
 @font-face {
 	font-family: 'NGC-Bold';
-	src: url("fonts/NGC/NGCDINOnAir-Bold.woff2") format("woff2"), url("fonts/NGC/NGCDINOnAir-Bold.woff") format("woff"),
-		url("fonts/NGC/NGCDINOnAir-Bold.ttf") format("truetype");
+	src: url("./fonts/NGC/NGCDINOnAir-Bold.woff2") format("woff2"), url("./fonts/NGC/NGCDINOnAir-Bold.woff") format("woff"),
+		url("./fonts/NGC/NGCDINOnAir-Bold.ttf") format("truetype");
 	font-weight: 600;
 }
 
 @font-face {
 	font-family: 'NGC-Black';
-	src: url("fonts/NGC/NGCDINOnAir-Black.woff2") format("woff2"), url("fonts/NGC/NGCDINOnAir-Black.woff") format("woff"),
-		url("fonts/NGC/NGCDINOnAir-Black.ttf") format("truetype");
+	src: url("./fonts/NGC/NGCDINOnAir-Black.woff2") format("woff2"), url("./fonts/NGC/NGCDINOnAir-Black.woff") format("woff"),
+		url("./fonts/NGC/NGCDINOnAir-Black.ttf") format("truetype");
 	font-weight: 700;
 }
 

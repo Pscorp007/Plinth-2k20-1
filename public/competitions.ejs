@@ -2,277 +2,118 @@
 <html lang="en">
 
 <head>
-    <% include partials/head %>
 
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/competitions.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/compete.css">
+    <% include partials/head %>
+    
 </head>
 
+<% include partials/header %>
+
 <body>
-    <div class="preloader">
-        <div class="preloader-ring"></div>
-    </div>
-    <% include partials/header %>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9JNFT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Shaders -->
-    <script id="shader-fs" type="x-shader/x-fragment">
-        #ifdef GL_ES
-	    precision highp float;
-	    #endif
-	  void main(void) {
-	   gl_FragColor = vec4(0.2, 0.3, 0.4, 1.0);
-	  }
-	</script>
-    <script id="shader-vs" type="x-shader/x-vertex">
-        attribute vec3 vertexPosition;
+        <!--<div>
+            <div class="stars"><div class="nebula"></div></div>
+        </div>-->
+        
+            <h1 class="heading">COMPETITIONS</h1>
+        
+        
 
-	  uniform mat4 modelViewMatrix;
-	  uniform mat4 perspectiveMatrix;
-
-	  void main(void) {
-	    gl_Position = perspectiveMatrix * modelViewMatrix * vec4(  vertexPosition, 1.0);
-	  }
-	</script>
-
-
-    <!-- three.js -->
-
-    <div id="webgl-output"></div>
-
-    <div class="bg-mask"></div>
-    <h1 style="padding-top:15vh; text-align: center; transform: scale(1);">Competitons</h1>
-    <div class="main-content">
-        <div class="scroll-content" id="style-1">
-            <div class="inner-content ch-grid">
-                <div class="text-padding" style="transform: scale(1);">
-
-                    <div class="row">
-                        <div class="col-sm-12   col-md-4 cir_res">
-                            <li>
-
-                                <div class="ch-item ch-img-1 cir_res">
-                                    <a href="/competitions/astronomy">
-                                        <div class="ch-info">
-                                            <h3>Astronomy</h3>
-
-                                        </div>
-                                    </a>
-                                </div>
-
-                            </li>
-
-                        </div>
-                        <div class="col-sm-12  col-md-4 cir_res">
-                            <li>
-                                <div class="ch-item ch-img-2">
-                                    <a href="/competitions/coding">
-                                        <div class="ch-info">
-                                            <h3>Coding</h3>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-
-                        </div>
-                        <div class="col-sm-12  col-md-4 cir_res">
-                            <li>
-                                <div class="ch-item ch-img-3">
-                                    <a href="/competitions/robotics">
-                                        <div class="ch-info">
-                                            <h3>Robotics</h3>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-
-                        </div>
-
-                    </div>
-                    <div class="row ">
-                        <div class="col-sm-12   col-md-4 cir_res">
-                            <li>
-                                <div class="ch-item ch-img-4">
-                                    <a href="/competitions/management">
-                                        <div class="ch-info">
-                                            <h3>Management</h3>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-
-                        </div>
-                        <div class="col-sm-12  col-md-4 cir_res">
-                            <li>
-                                <div class="ch-item ch-img-5">
-                                    <a href="/competitions/quizzing">
-                                        <div class="ch-info">
-                                            <h3>Quizzing</h3>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-
-                        </div>
-                        <div class="col-sm-12 col-md-4 cir_res">
-                            <li>
-                                <div class="ch-item ch-img-6">
-                                    <a href="/competitions/literature">
-                                        <div class="ch-info">
-                                            <h3>Literature</h3>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-
-                        </div>
-                    </div>
-                    <div class="row fhtc">
-                        <!-- <div class="col-sm-12 col-md-4 i spa">
-                            <li>
-                                <div class="ch-item ch-img-circuitdes ">
-                                    <a href="/competitions/robotics/electrothon">
-                                        <div class="ch-info">
-                                            <h3 class="link">Electrothon</h3>
-                                        </div>
-                                </div>
-                                </a>
-                            </li>
-                        </div> -->
-
-                        <div class="col-sm-12 col-lg-2 col-md-3">
-                            <li>
-
-                                <div class="ch-item ch-img-pra">
-                                    <a href="/competitions/pratibimb">
-                                        <div class="ch-info">
-                                            <h3 class="link">Pratibimb 2.0</h3>
-                                        </div>
-                                </div>
-                                </a>
-                            </li>
-
-                        </div>
-
-                    </div>
-
-
+        <div class="main">
+            
+            <ul class="cards">
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img class="image" src="https://picsum.photos/500/300/?image=10"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">ASTRONOMY</h2>
+                    <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                    <a href="./astro.html" style="text-decoration:none;"><button class="btn card_btn">More Info</button></a>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img class="image" src="https://picsum.photos/500/300/?image=5"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">CODING</h2>
+                    <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                    <a href="./coding.html" style="text-decoration:none;"><button class="btn card_btn">More Info</button></a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img class="image" src="https://picsum.photos/500/300/?image=11"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">ROBOTICS</h2>
+                    <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                    <a href="./robotics.html" style="text-decoration:none;"><button class="btn card_btn">More Info</button></a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img class="image" src="https://picsum.photos/500/300/?image=14"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">STUDENT INTERN FAIR</h2>
+                    <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                    <a href="" style="text-decoration:none;"><button class="btn card_btn">More Info</button></a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img class="image" src="https://picsum.photos/500/300/?image=17"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">QUIZZING</h2>
+                    <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                    <a href="./quizzing.html" style="text-decoration:none;"><button class="btn card_btn">More Info</button></a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img class="image" src="https://picsum.photos/500/300/?image=2"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">PRATIBIMB</h2>
+                    <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                    <a href="./pratibimb.html" style="text-decoration:none;"><button class="btn card_btn">More Info</button></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+        
 
-    <% include partials/footer %>
+    <%include partials/footer%>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/loginscript.js"></script>
-    <script src="js/scrollmagic.js"></script>
-    <script src="js/sphere.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-        window.addEventListener('load', function () {
+    
+<script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 0) {
+            //console.log("ahkdsj");
+            $("#navbar-menu").addClass("color-change");
+            $('footer').addClass("color-change");
 
-            var el = document.querySelector('.preloader');
-            el.style.opacity = 1;
-
-            (function fade() {
-                if ((el.style.opacity -= 0.15) < 0) {
-                    window.scrollTo(0, 0);
-                    el.style.display = "none";
-                    controls.redraw();
-                    controls.rend();
-                    controls.start();
-                } else {
-                    requestAnimationFrame(fade);
-                }
-            })();
-        });
-    </script>
-    <script>
-        if (screen.width > 1024) {
-            function remove() {
-                var elem = document.getElementById('rlbuttn');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
+        } else {
+            $("#navbar-menu").removeClass("color-change");
+            $('footer').removeClass("color-change");
         }
-    </script>
-    <script>
-        var elem = document.getElementById('rlbuttn_menu');
-        if (elem != null) {
-            if (screen.width > 1024) {
-                function remove() {
+    });
 
-                    elem.parentNode.removeChild(elem);
-                    return false;
-                }
-                remove();
-            }
-        }
-    </script>
+    
 
-    <script>
-        var elem = document.getElementById('faqbtn_rm');
-        if (elem != null) {
-            if (screen.width < 500) {
-                function remove() {
 
-                    elem.parentNode.removeChild(elem);
-                    return false;
-                }
-                remove();
-            }
-        }
     </script>
-    <script>
-        if (screen.width > 500) {
-            function remove() {
-                var elem = document.getElementById('faq_rm');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-    <script>
-        if (screen.width < 769) {
-            function remove() {
-                var elem = document.getElementById('seprate');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-    <script>
-        if (screen.width > 769) {
-            function remove() {
-                var elem = document.getElementById('mobsep');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="js/js.js"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-125190547-1');
-    </script>
+        
 </body>
-
 </html>

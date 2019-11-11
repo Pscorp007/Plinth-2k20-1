@@ -5,8 +5,8 @@ var dburl = process.env.DB_URL_PLINTH;
 console.log(dbusername);
 console.log(dbpassword);
 console.log(dburl);
-console.log('mongodb+srv://'+ dbusername + ':' + dbpassword + dburl);
+console.log('mongodb://'+ dbusername + ':' + dbpassword + dburl);
 
 
 
-exports.url = 'mongodb+srv://'+ dbusername + ':' + dbpassword + dburl;
+exports.url = 'mongodb://'+ dbusername + ':' + dbpassword + dburl;

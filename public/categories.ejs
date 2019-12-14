@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/head %>
+
+
+    <link rel="stylesheet" href="css/competitions.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <script>
+        var urls = <%- JSON.stringify(competitionUrl) %> ;
+       </script>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader-ring"></div>
+    </div>
+    <% include partials/header %>
+
+    <!-- Shaders -->
+    <script id="shader-fs" type="x-shader/x-fragment">
+        #ifdef GL_ES
+            precision highp float;
+            #endif
+          void main(void) {
+           gl_FragColor = vec4(0.2, 0.3, 0.4, 1.0);
+          }
+        </script>
+    <script id="shader-vs" type="x-shader/x-vertex">
+        attribute vec3 vertexPosition;
+    
+          uniform mat4 modelViewMatrix;
+          uniform mat4 perspectiveMatrix;
+    
+          void main(void) {
+            gl_Position = perspectiveMatrix * modelViewMatrix * vec4(  vertexPosition, 1.0);
+          }
+        </script>
+
+
+    <!-- three.js -->
+
+    <div id="webgl-output"></div>
+
+    <div class="bg-mask"></div>
+
+
+    <div class="main-content">
+        <div class="scroll-content" id="style-1">
+            <div class="inner-content ch-grid">
+                <div class="text-padding" style="transform: scale(1);">
+
+                    <!-- Astronomy -->
+                    <% if(category == "astronomy"){ %>
+                    <div id="astronomy-list">
+                        <h1 style="padding-bottom:5vh;text-align: center; transform: scale(1);">Astronomy</h1>
+                        <div class="row ">
+                            <div class="col-sm-12  col-md-4">
+                                <li>
+                                    <div class="ch-item ch-img-astro_quiz more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Astro Quiz</h3>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </div>
+                            <div class="col-sm-12  col-md-4">
+                                <li>
+                                    <div class="ch-item ch-img-astro_hunt more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Astro Hunt</h3>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </div>
+                            <div class="col-sm-12  col-md-4">
+
+                                <li>
+
+                                    <div class="ch-item ch-img-into_the_universe more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Into The Universe</h3>
+
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coding -->
+
+                    <% } else if(category == "coding"){ %>
+                    <div id="coding-list">
+                        <h1 style="padding-bottom:5vh;text-align: center; transform: scale(1);">Coding</h1>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <li>
+
+                                    <div class="ch-item ch-img-iupc more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">IUPC</h3>
+
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <li>
+                                    <div class="ch-item ch-img-enigma more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Enigma</h3>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <li>
+                                    <div class="ch-item ch-img-ka more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Code Sessions</h3>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Robotics -->
+
+                    <% } else if(category == "robotics"){ %>
+                    <h1 style="padding-bottom:5vh;text-align: center; transform: scale(1);">Robotics</h1>
+                    <div id="robotics-list">
+                        <div class="row ">
+                            <div class="col-sm-12  col-md-4">
+                                <li>
+                                    <div class="ch-item ch-img-robowar more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Robowar</h3>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </div>
+                            <div class="col-sm-12  col-md-4">
+                                <li>
+                                    <div class="ch-item ch-img-robosoccer more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Robosoccer</h3>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </div>
+                            <div class="col-sm-12  col-md-4">
+                                <li>
+                                    <div class="ch-item ch-img-lfr more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Line-Wall Follower</h3>
+
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+
+                        </div>
+                        <div class="row ">
+                            <div class="col-sm-12  col-md-4">
+
+                                <li>
+                                    <div class="ch-item ch-img-drone more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Drone Obstruction</h3>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <li>
+
+                                    <div class="ch-item ch-img-mazes more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Maze Solver</h3>
+
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+
+                                <li>
+
+                                    <div class="ch-item ch-img-rcp more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">RC Plane</h3>
+
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </div>
+
+
+                        </div>
+                        <div class="row ">
+                            <div class="col-sm-12  col-md-4">
+                                <li>
+
+                                    <div class="ch-item ch-img-roborace more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Roborace</h3>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="col-sm-12  col-md-4">
+
+                                <li>
+
+                                    <div class="ch-item ch-img-tpr more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Transporter</h3>
+
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </div>
+                            <div class="col-sm-12  col-md-4">
+                                <li>
+
+                                    <div class="ch-item ch-img-ice more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Nitro Race</h3>
+
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </div>
+
+                        </div>
+                        <!-- <div class="row fhtc"> -->
+                            <!-- <div class="col-sm-12  col-md-4 i">
+                                <li>
+                                    <div class="ch-item ch-img-circuitdes more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Circuit Design</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div> -->
+                            <!-- <div class="col-sm-12  col-md-4 j">
+                                <li>
+                                    <div class="ch-item ch-img-waterrocket more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Water Rocket</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div> -->
+                        <!-- </div> -->
+                    </div>
+
+                    <!-- Management -->
+
+                    <% } else if(category == "management"){ %>
+                    <div id="management-list">
+                        <h1 style="padding-bottom:5vh;text-align: center; transform: scale(1);">Management</h1>
+
+                        <div class="row fhtc">
+                            <div class="col-sm-12 col-lg-2 col-md-3">
+                                <li>
+
+                                    <div class="ch-item ch-img-stf more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">StartUp Intern Fair</h3>
+
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Quizzing -->
+
+                    <% } else if(category == "quizzing"){ %>
+                    <div id="quizzing-list">
+                        <h1 style="padding-bottom:5vh;text-align: center; transform: scale(1);">Quizzing</h1>
+                        <div class="row quz">
+                            <div class="col-sm-12 col-md-4 i spa">
+                                <li>
+
+                                    <div class="ch-item ch-img-brdw more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Brandwagon</h3>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                            </div>
+                            <div class="col-sm-12 col-md-4 j spa">
+                                <li>
+                                    <div class="ch-item ch-img-theq more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">The Quest</h3>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- Literature -->
+
+                    <% } else if(category == "literature"){ %>
+                    <div id="literature-list">
+                        <h1 style="padding-bottom:5vh;text-align: center; transform: scale(1);">Literature</h1>
+                        <div class="row fhtc">
+                            <div class="col-sm-12 col-lg-2 col-md-3">
+                                <li>
+
+                                    <div class="ch-item ch-img-rostrum more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Rostrum</h3>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                            </div>
+                            <!-- <div class="col-sm-12  col-md-4 j spa">
+                                <li>
+
+                                    <div class="ch-item ch-img-comikaze more-details">
+                                        <div class="ch-info">
+                                            <h3 class="link">Comikaze</h3>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                            </div> -->
+
+                        </div>
+                    </div>
+                    
+
+                    <!-- Pratibimb -->
+
+                    <% } else if(category == "pratibimb"){ %>
+                        <div id="literature-list">
+                            <h1 style="padding-bottom:5vh;text-align: center; transform: scale(1);">Pratibimb 2.0</h1>
+                            <div class="row quz">
+                                <div class="col-sm-12  col-md-4 i spa">
+                                    <li>
+    
+                                        <div class="ch-item ch-img-design more-details">
+                                            <div class="ch-info">
+                                                <h3 class="link">3D Designing</h3>
+                                            </div>
+                                        </div>
+    
+                                    </li>
+    
+                                </div>
+                                <div class="col-sm-12  col-md-4 j spa">
+                                    <li>
+    
+                                        <div class="ch-item ch-img-poster more-details">
+                                            <div class="ch-info">
+                                                <h3 class="link">Poster Designing</h3>
+                                            </div>
+                                        </div>
+    
+                                    </li>
+    
+                                </div>
+    
+                            </div>
+                        </div>
+                        <% }  %>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% include partials/footer %>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/loginscript.js"></script>
+    <script src="js/scrollmagic.js"></script>
+    <script src="js/sphere.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/categories.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+
+            var el = document.querySelector('.preloader');
+            el.style.opacity = 1;
+
+            (function fade() {
+                if ((el.style.opacity -= 0.15) < 0) {
+                    window.scrollTo(0, 0);
+                    el.style.display = "none";
+                    controls.redraw();
+                    controls.rend();
+                    controls.start();
+                } else {
+                    requestAnimationFrame(fade);
+                }
+            })();
+        });
+    </script>
+    <script>
+        if (screen.width > 1024) {
+            function remove() {
+                var elem = document.getElementById('rlbuttn');
+                elem.parentNode.removeChild(elem);
+                return false;
+            }
+            remove();
+        }
+    </script>
+    <script>
+        var elem = document.getElementById('rlbuttn_menu');
+        if (elem != null) {
+            if (screen.width > 1024) {
+                function remove() {
+
+                    elem.parentNode.removeChild(elem);
+                    return false;
+                }
+                remove();
+            }
+        }
+    </script>
+
+    <script>
+        var elem = document.getElementById('faqbtn_rm');
+        if (elem != null) {
+            if (screen.width < 500) {
+                function remove() {
+
+                    elem.parentNode.removeChild(elem);
+                    return false;
+                }
+                remove();
+            }
+        }
+    </script>
+    <script>
+        if (screen.width > 500) {
+            function remove() {
+                var elem = document.getElementById('faq_rm');
+                elem.parentNode.removeChild(elem);
+                return false;
+            }
+            remove();
+        }
+    </script>
+    <script>
+        if (screen.width < 769) {
+            function remove() {
+                var elem = document.getElementById('seprate');
+                elem.parentNode.removeChild(elem);
+                return false;
+            }
+            remove();
+        }
+    </script>
+    <script>
+        if (screen.width > 769) {
+            function remove() {
+                var elem = document.getElementById('mobsep');
+                elem.parentNode.removeChild(elem);
+                return false;
+            }
+            remove();
+        }
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="js/js.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-125190547-1');
+    </script>
+</body>
+
+</html>

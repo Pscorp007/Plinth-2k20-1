@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= page.charAt(0).toUpperCase() + page.slice(1); %> | Plinth 2019, LNMIIT Jaipur | Techno-Management Literary
+        Fest</title>
+
+    <!-- Meta for SEO -->
+    <meta property="og:title" content="Plinth 2019, LNMIIT Jaipur | Techno-Management Literary Fest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plinth.in">
+    <meta property="og:image" content="https://plinth.in/media/plinth.png">
+    <meta property="og:description" content="Plinth: 19th to 20th January. LNMIIT presents Techno-Management Literary Fest. Get ready for an awesome breathtaking journey.">
+
+    <meta name="author" content="Swarnim">
+    <meta name="theme-color" content="#2998ff">
+    <meta name="description" content="Plinth: 19th to 20th January. LNMIIT presents Techno-Management Literary Fest. Get ready for an awesome breathtaking journey.">
+    <meta name="keywords" content="plinth,lnmiit mun, mun, model united nations, lok sabha, disec, unhrc, plinth 2019, techfest, competitions, workshops, pro-night, jaipur, fest, India, Rajasthan, best, college, university, biggest, largest, lnmiit, mittal, students, robots, country, campaign, initiative, sponsors, games, artists,international, contacts, plinth lnmiit, plinth_lnmiit, plinthlnmiit, plinth.lnmiit, awesome, Science, Technology, lectures, talks, exhibitions, student outreach program, astronomy, robotics, startup, coding, iupc, codeswap, robowar, roborace, astro hunt, astro quiz, quiz, quizzinga, robosoccer, drone, maaze solver, transporter, rc place, sif, startup intern fair, intern fair, fair, tech shows , tech entertainment, tech extravaganza, revolution, social, exhibitions, 2k16, 2k17, 2k18, 2k19, 2016, 2017, 2016-17, 2017-18, 2018-19 plinth2k19, CAP, ca, cA, CAMPUS, campus ambassador, 2019, leader, mun, plinth 2k19">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@PlinthLNMIIT">
+    <meta name="twitter:creator" content="@nimbus_1212">
+
+    <meta name="twitter:title" content="Plinth 2019, LNMIIT Jaipur | Techno-Management Literary Fest">
+    <meta name="twitter:description" content="Come Join Your Friends on an awesome TechFest!! #Plinth #2k19.">
+    <meta name="twitter:image" content="https://plinth.in/media/plinth.png">
+    <meta name="twitter:domain" content="plinth.in">
+
+    <!-- Favicon -->
+    <link rel="favicon icon" href="/public/media/fav/favicon.ico" />
+    <link href=https://plinth.in/media/fav/apple-icon-60x60.png rel=apple-touch-icon sizes=60x60>
+    <link href=https://plinth.in/media/fav/apple-icon-120x120.png rel=apple-touch-icon sizes=120x120>
+    <link href=https://plinth.in/media/fav/apple-icon-76x76.png rel=apple-touch-icon sizes=76x76>
+    <link href=https://plinth.in/media/fav/apple-icon-152x152.png rel=apple-touch-icon sizes=152x152>
+    <link href=https://plinth.in/media/fav/android-icon-192x192.png rel="icon" type="image/png" sizes="192x192">
+    <meta name="msapplication-TileImage" content="https://plinth.in/media/ms-icon-144x144.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/mun_style.css">
+    <link rel="stylesheet" href="./css/mun-icon-font.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example" data-offset="200">
+
+    <div id="mobile-bar"></div>
+    <input type="checkbox" class="check" id="checked">
+    <label class="menu-btn" for="checked">
+        <span class="bar top"></span>
+        <span class="bar middle"></span>
+        <span class="bar bottom"></span>
+        <span class="menu-btn__text"></span>
+    </label>
+    <label class="close-menu" for="checked"></label>
+    <nav class="drawer-menu">
+        <ul>
+            <li><a href="#about" class="page_scroll">About</a></li>
+            <li><a href="#organiser" class="page_scroll">Organiser's desk</a></li>
+            <li><a href="#committees" class="page_scroll">Committees</a></li>
+            <li><a href="#eb" class="page_scroll">Executive Board</a></li>
+            <li><a href="#contact" class="page_scroll">Contact Us</a></li>
+            <li><a href="/" class="page_scroll">Plinth</a></li>
+            <% if(isLoggedIn){ %>
+
+            <li class="nav-item dropdown page_scroll">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Hi,
+                    <%- user.name %>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                    <a class="dropdown-item" href="/profile" style="color:#333;margin-left: 0px;">Profile</a>
+                    <a class="dropdown-item" href="/user/logout/mun" style="color:#333; margin-left: 0px;">LogOut</a>
+
+                </div>
+            </li>
+
+            <% } else { %>
+
+            <li><a class="page_scroll" data-toggle="modal" data-target="#exampleModalCenter" style="color:#fff">Login
+                    | Register</a><span></span></li>
+            <% } %>
+        </ul>
+    </nav>
+    <div id="desk-nav" class="fadeIn delay-10s animated " style="animation-delay:0.9s">
+        <nav>
+            <ul>
+                <li><a href="#about" class="page_scroll">About</a></li>
+                <li><a href="#organiser" class="page_scroll">Organiser's Desk</a></li>
+                <li><a href="#committees" class="page_scroll">Committees</a></li>
+                <li><a href="#eb" class="page_scroll">Executive Board</a></li>
+                <li><a href="#contact" class="page_scroll">Contact Us</a></li>
+                <li><a href="/" class="page_scroll">Plinth</a></li>
+                <% if(isLoggedIn){ %>
+
+                <li class="nav-item dropdown page_scroll">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Hi,
+                        <%- user.name %>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                        <a class="dropdown-item" href="/profile" style="color:#333;margin-left: 0px !important;">Profile</a>
+                        <a class="dropdown-item" href="/user/logout/mun" style="color:#333; margin-left: 0px !important;">LogOut</a>
+
+                    </div>
+                </li>
+
+                <% } else { %>
+
+                <li><a class="page_scroll" data-toggle="modal" data-target="#exampleModalCenter" style="color:#fff">Login
+                        | Register</a><span></span></li>
+                <% } %>
+            </ul>
+        </nav>
+    </div>
+
+
+    <header class="header" id="reg-home">
+        <div class="header__logo-box">
+            <img src="./media/mun/logo.png" alt="Logo" class="header__logo">
+        </div>
+
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main"><img src="./media/plinth-logo.png" height="100px"></span>
+                <span class="heading-primary--sub" style="padding-top: 20px;">Model United Nation</span>
+                <br />
+                <span class="heading-primary--sub" style="float: right; font-size: 1.7rem">12<sup style="text-transform:lowercase">th</sup>-13<sup
+                        style="text-transform:lowercase">th</sup> January</span>
+            </h1>
+            <% if(isLoggedIn){ %>
+            <div class="col-1-of-2">
+                <a href="https://goo.gl/forms/WuLxpKM0KKdJqlWJ2?fbclid=IwAR199bVlw0EuzGuqC7q21879KtSgG_-JO3VJYW9A5M74yy3HAv-Np-KZwGU" class="btn btn--white btn--animated">Register</a>
+            </div>
+            <div class="col-1-of-2" style="padding-top: 20px;">
+                <a id="paynow" data-target="#payModel" data-toggle="modal" href="#" class="btn btn--white btn--animated">Pay
+                    Now</a>
+            </div>
+
+            <% } else { %>
+            <a href="https://goo.gl/forms/WuLxpKM0KKdJqlWJ2?fbclid=IwAR199bVlw0EuzGuqC7q21879KtSgG_-JO3VJYW9A5M74yy3HAv-Np-KZwGU" class="btn btn--white btn--animated">Register</a>
+            <% } %>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="section-about" id="about">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    About Us
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-2">
+                    <p class="paragraph">
+                        <em>"As the young leaders of tomorrow you have the passion, energy and commitment to make a
+                            difference. What I would like to really urge you do is to have a global vision. Go beyond
+                            your
+                            countries; go beyond your national boundaries."</em>
+
+                        -Ban Ki-moon <br><br>
+
+                        Welcome to the crazy and diplomatic world of Model UN!
+
+                        This will be a journey that will teach you about the world, let you develop life changing
+                        skills and make friends with excellent people you'd never met otherwise. You will learn to
+                        research, speak publicly, think critically and develop leadership skills. You will travel, have
+                        fun, laugh, cry, learn the art of teamwork and come out inspired and empowered to make the
+                        world a better place. <br>
+
+                        LNMIIT MUN 2k19 brings to you this efficacious opportunity where you can explore yourself and
+                        this world. The novice will get a taste of diplomacy and the extremes will get a perfect
+                        platform to keep their points on, getting a chance to debate amongst the consummate delegates.
+                        <br>
+
+                        LNMIIT MUN consists of UNHRC, DISEC and Lok Sabha. You can try out your skills in the one you
+                        prefer to, because ,"your preference is our priority". Also, it will be a two day conference
+                        scheduled on 12th Jan and 13th Jan 2k19. <br>
+                        So, get yourself registered in this much awaited version of LNMIIT MUN and you are assured to
+                        name it as "worth waiting", once you be a part of it.
+                        Mark the dates!
+
+
+                    </p>
+
+                </div>
+                <div class="col-1-of-2">
+                    <div class="composition">
+
+                        <img srcset="./media/mun/sample1.jpg 300w, ./media/mun/sample1.jpg 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 1" class="composition__photo composition__photo--p1" src="./media/mun/sample1.jpg">
+
+                        <img srcset="./media/mun/sample2.jpg 300w, ./media/mun/sample2.jpg 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 2" class="composition__photo composition__photo--p2" src="./media/mun/sample2.jpg">
+
+                        <img srcset="./media/mun/sample3.jpg 300w, ./media/mun/sample3.jpg 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 3" class="composition__photo composition__photo--p3" src="./media/mun/sample3.jpg">
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-features" id="organiser">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary" style="color: rgb(201, 201, 201)">
+                    Organiser's Desk
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-2">
+                    <p class="paragraph" style="color: rgb(201, 201, 201)">
+                        Dear friends, It gives me immense pleasure to bring you the 5th edition of LNMIIT Model United
+                        Nations, to be held on 12<sup>th</sup>-13<sup>th</sup> of January, 2019 at LNMIIT, Jaipur. It
+                        is my privilege to lead
+                        the team which will be your host for this conference. Every MUN that I have been a part of, has
+                        strengthened the belief, that an MUN is the most complete form of debate. It is a great
+                        opportunity to enhance skills in research, writing, public speaking, problem solving, consensus
+                        building and crisis management. It gives you the honor of being an ambassador of a country.
+                        More importantly, it entrusts you with the task of solving global issues. With LNMIIT MUN, we
+                        intend to provide you a platform to discuss and deliberate on realistic issues through an
+                        assemblage of committees, led by a brilliant Executive Board. The team is committed to make
+                        your experience enjoyable and rewarding through a structured environment. We hope to make the
+                        conference a landmark MUN and aspire for your support in doing so. I welcome you again and look
+                        forward to see you all here at LNMIIT MUN 2019.
+                    </p>
+                    <div class="org-name" style="color: rgb(201, 201, 201); text-align: right">
+                        <strong>
+                            <h1>- Pulkit Mathur</h1><br>
+                            <h2> Secretary General</h2>
+                        </strong>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="composition">
+
+
+
+                        <img srcset="./media/mun/img3.png 300w, ./media/mun/img3.png 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 3" class="composition__photo org-pic" style="background: transparent" src="./media/mun/img3.png">
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="committees" id="committees" style="text-align: center">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    Committees
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--1">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--1">The Lok Sabha</span>
+                            </h4>
+                            <div class="card__details">
+                                <p style="font-size: 2rem;">
+                                    Agenda <br>
+                                    <em>"Right to freedom with a special emphasis on Sedition Act"</em>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back card__side--back-1">
+                            <div class="card__cta">
+                                <div class="card__price-box">
+                                </div>
+                                <a href="#popup1" class="btn btn--white">Read more!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--2">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--2">UNHRC</span>
+                            </h4>
+                            <div class="card__details">
+                                <p style="font-size: 2rem;">
+                                    Agenda <br>
+                                    <em>"The rights of indigenous peoples"</em>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="card__side card__side--back card__side--back-2">
+                            <div class="card__cta">
+                                <div class="card__price-box">
+                                </div>
+                                <a href="#popup2" class="btn btn--white">Read more!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--3">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--3">DISEC</span>
+                            </h4>
+                            <div class="card__details">
+                                <p style="font-size: 2rem;">
+                                    Agenda <br>
+                                    <em>"Israeli actions in occupied east Jerusalem and the rest of the occupied
+                                        Palestinian territory"</em>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="card__side card__side--back card__side--back-3">
+                            <div class="card__cta">
+                                <div class="card__price-box">
+                                </div>
+                                <a href="#popup3" class="btn btn--white">Read more!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-stories" id="eb">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    Executive Board
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape">
+                        <img src="./media/mun/parth.jpg" alt="Parth Pareek" class="story__img">
+                        <figcaption class="story__caption">Parth Pareek</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">The Lok Sabha</h3>
+                        <p>
+                           <b>Mr. Pareek </b>has an experience of more than 150 MUNs. He has an excellent command over both English and HIndi and his in depth knowledge leaves the delegates in awe.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape">
+                        <img src="./media/mun/Akshit.jpg" alt="Person on a tour" class="story__img">
+                        <figcaption class="story__caption">Akshit Seth</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">UNHRC</h3>
+                        <p>
+                           <b>Mr. Seth</b> is an ardent MUNner and has been involved in MUNs since a long time. It is a pleasure to have him with us.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape">
+                        <img src="./media/mun/tammana.jpg" alt="Person on a tour" class="story__img">
+                        <figcaption class="story__caption">Tammana Tasneem Krity</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">DISEC</h3>
+                        <p>
+                           <b>Ms. Tasneem </b>is a resident of Dhaka, Bangladesh and is currently involved with United Nations Youth and Students association of Bangladesh.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="section-book" id="contact">
+            <div class="row">
+                <div class="col-md-12 col-sm-6">
+                    <div class="book">
+                        <div class="book__form">
+
+                            <div class="u-margin-bottom-medium">
+                                <h2 class="heading-secondary">
+                                    Contact Us
+                                </h2>
+                            </div>
+                            <div class="contact-us">
+                                <h3 class='heading-secondary' style="font-size:18px;text-transform: none;">Pulkit
+                                    Mathur: <a href="tel:+91-9462230822" style="text-decoration:none;color: #1E4D8B">+919462230822</a></h3><br>
+                                <h3 class='heading-secondary' style="font-size:18px;text-transform: none;">Eklavaya
+                                    Singh Shekhawat: <a href="tel:+91-9462230822" style="text-decoration:none;color: #1E4D8B">+919462230822</a></h3><br>
+                                <h3 class='heading-secondary' style="font-size:18px;text-transform: none;">Mail Us At :
+                                    <a href="mailto: mun@plinth.in" style="text-decoration:none;text-transform: lowercase;color: #1E4D8B">mun@plinth.in</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <div class="popup" id="popup1">
+        <div class="popup__content">
+
+            <div class="popup__right">
+                <a href="#committees" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">The Lok Sabha</h2>
+                <!-- <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before
+                    booking</h3> -->
+                <p class="popup__text">
+                    "The Lok Sabha" is one of the most representative chamber of the parliament.It is composed of
+                    member of parliament who come on direct election basis of the adult suffrage. The maximum strength
+                    of the House envisaged by the Constitution is 552, which is made up by election of upto 530 members
+                    to represent the States, upto 20 members to represent the Union Territories and not more than two
+                    members of the Anglo-Indian Community to be nominated by the Hon'ble President, if, in his/her
+                    opinion, that community is not adequately represented in the House.
+                    Being a bicameral legislature, lok sabha performs a number of useful functions from law making ;
+                    controlling financial matters ; passing bills ; electing a number of deferential personalities like
+                    president, vice-president , speaker and deputy speaker of the house to sharing its power with the
+                    upper house to amend the constitution.
+
+                </p>
+                <a href="#reg-home" class="btn btn--green">Register now!</a>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup2">
+        <div class="popup__content">
+
+            <div class="popup__right">
+                <a href="#committees" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">The United Nations Human Rights Council (UNHRC)</h2>
+                <!-- <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before
+                    booking</h3> -->
+                <p class="popup__text">
+                    The United Nations Human Rights Council (UNHRC) is a United Nations body whose mission is to
+                    promote and protect human rights around the world. It is an intergovernmental body within the
+                    United Nations system which aims at exterpating human rights violations.
+                    The UNHRC has 47 members elected by the United Nations General Assembly for staggered three-year
+                    terms. It meets at the UN Office at Geneva.
+                </p>
+                <a href="#reg-home" class="btn btn--green">Register now!</a>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup3">
+        <div class="popup__content">
+
+            <div class="popup__right">
+                <a href="#committees" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">The Disarmament and International Security
+                    Committee (DISEC) </h2>
+                <!-- <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before
+                    booking</h3> -->
+                <p class="popup__text">
+                    Formed in 1945, is the very First Committee of the United Nations General Assembly (GA). It was
+                    created as one of the six main committees of the General Assembly. It includes all nations that are
+                    United Nations Member States. DISEC’s primary role is to maintain peace around the world. The First
+                    Committee or the DISEC deals with disarmament, global challenges, and threats to peace that affect
+                    the international community and seeks out solutions to the challenges in the international security
+                    regime. Ensuring this is vital for the international community.
+                </p>
+                <a href="#reg-home" class="btn btn--green">Register now!</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title w-100 text-center" id="exampleModalLongTitle">Register Yourself</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>Register yourself for different competitions through this portal to know further details and
+                        proceedings of PLINTH'19.
+                        Morever if you register through this platform , you would be able to get exclusive coupons
+                        and offers.
+
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-sm-6 text-left">
+                        <a onclick='userLoginInitiate("/user/auth/google")'><button type="button" class="btn btn-outline-primary "><img
+                                    class="g_icon" src="../media/g_icon.png">
+                                &nbspGoogle</button></a>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <a onclick='userLoginInitiate("/user/auth/facebook")'><button type="button" class="btn btn-outline-primary"><img
+                                    class="f_icon" src="../media/f_icon.png">
+                                &nbspFacebook</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pay Modal -->
+
+    <% if(isLoggedIn){ %>
+    <div class="modal fade" id="payModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title font-a">Payment Form</h2>
+                    <button type="button" id="form-close" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form id="mun-form">
+                        <div class="form-group">
+                            <label for="name">Name*</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter name" value='<%- user.name %>'
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" value='<%- user.email %>'
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact_mun" class="control-label">Contact Number*</label>
+                            <input type="number" class="form-control" id="contact_mun" placeholder="Enter Contact Number"
+                                value="<%= user.phoneNumber %>" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="college">Institute Name*</label>
+                            <input type="text" class="form-control" id="college" placeholder="Enter Insitute Name"
+                                value='<%- user.college %>' required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">City*</label>
+                            <input type="text" class="form-control" id="city" placeholder="Enter City" value='<%- user.city %>'
+                                required>
+                        </div>
+
+                        <fieldset class="form-group">
+                            <label>Choose Delegation*</label>
+                            <br>
+                            <div class="form-check  form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="typeRadio" id="ip" value="Delegates">
+                                    Delegates
+                                </label>
+                            </div>
+                            <div class="form-check  form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="typeRadio" id="del" value="IP">
+                                    International Press
+                                </label>
+                            </div>
+
+
+                        </fieldset>
+
+                        <div id="hidden-matter">
+
+                            <div class="form-group">
+                                <label for="committee">Allotted Committee*</label>
+                                <select class="form-control" id="committee" required>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="portfolio">Allotted Portfolio</label>
+                                <input type="text" class="form-control" id="portfolio" placeholder="Enter Portfolio">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="referral">Refferal Code</label>
+                                <input type="text" class="form-control" id="referral" placeholder="Enter Referral Code">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="accomodation">Accomodation*</label>
+                                <select class="form-control" id="accomodation" required>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group align-center">
+                                <label id="amount">Amount</label>
+
+                            </div>
+                            <div class="form-group">
+
+                                <input type="hidden" class="form-control" id="mEmail" value="<%- user.email %>">
+                            </div>
+
+                            <div class="align-center">
+                                <button type="submit" class="btn btn-dark btn--animated" id="submit-button">Pay</button>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/mun.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="js/js.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-125190547-1');
+    </script>
+
+</body>
+
+</html>

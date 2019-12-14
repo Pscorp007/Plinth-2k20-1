@@ -1,0 +1,29 @@
+<nav id="navbar-menu">
+	<div class="logo-plinth">
+			<a href="/"><img src="./media/logo.svg" alt="Logo Image"></a>
+	</div>
+	<div class="hamburger">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+	</div>
+	<ul class="nav-links">
+			<li class="different"><a href="/">Home</a></li>
+			<li class="different"><a href="#intro">About</a></li>
+			<li class="different"><a href="/competitions">Competitions</a></li>
+			<li class="different"><a href="/workshops">Workshops</a></li>
+			<li class="different"><a href="/talks">Talks</a></li>
+			<li class="different"><a href="/mun">DebSoc</a></li>
+			<li class="different"><a href="/proshow">ProShow</a></li>
+			<li class="different"><a href="/cryptex">Cryptex</a></li>
+			<% if(isLoggedIn){ %>
+				<li><button class="login-button">HEY <%=user.name%></li>
+				<li><button class="login-button"><a  href="/user/logout">Logout</a></button></li>
+			<% } else { %>
+				<li><button class="login-button" ><a  href="/auth/google">Login / Register</a></button></li>
+			<% } %>
+			<!-- <li><button class="login-button" href="#">Login / Register</button></li> -->
+			<!--<li><button class="join-button" href="#">Join</button></li>-->
+	</ul>
+</nav>
+<script src="./js/nav.js"></script>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/compete.css">
+    <% include partials/head %>
+    
+</head>
+
+<% include partials/header %>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9JNFT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+        <!--<div>
+            <div class="stars"><div class="nebula"></div></div>
+        </div>-->
+        
+            <h1 class="heading">COMPETITIONS</h1>
+        
+        
+
+        <div class="main">
+            
+            <ul class="cards">
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img class="image" src="https://picsum.photos/500/300/?image=10"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">ASTRONOMY</h2>
+                    <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                    <a href="./astro.html" style="text-decoration:none;"><button class="btn card_btn">More Info</button></a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img class="image" src="https://picsum.photos/500/300/?image=5"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">CODING</h2>
+                    <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                    <a href="./coding.html" style="text-decoration:none;"><button class="btn card_btn">More Info</button></a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img class="image" src="https://picsum.photos/500/300/?image=11"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">ROBOTICS</h2>
+                    <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                    <a href="./robotics.html" style="text-decoration:none;"><button class="btn card_btn">More Info</button></a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img class="image" src="https://picsum.photos/500/300/?image=14"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">STUDENT INTERN FAIR</h2>
+                    <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                    <a href="" style="text-decoration:none;"><button class="btn card_btn">More Info</button></a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img class="image" src="https://picsum.photos/500/300/?image=17"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">QUIZZING</h2>
+                    <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                    <a href="./quizzing.html" style="text-decoration:none;"><button class="btn card_btn">More Info</button></a>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img class="image" src="https://picsum.photos/500/300/?image=2"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">PRATIBIMB</h2>
+                    <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                    <a href="./pratibimb.html" style="text-decoration:none;"><button class="btn card_btn">More Info</button></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+        
+
+    <%include partials/footer%>
+
+    
+<script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 0) {
+            //console.log("ahkdsj");
+            $("#navbar-menu").addClass("color-change");
+            $('footer').addClass("color-change");
+
+        } else {
+            $("#navbar-menu").removeClass("color-change");
+            $('footer').removeClass("color-change");
+        }
+    });
+
+    
+
+
+    </script>
+        
+</body>
+</html>

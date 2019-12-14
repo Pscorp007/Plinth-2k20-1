@@ -2,212 +2,117 @@
 <html lang="en">
 
 <head>
-    <% include partials/head %>
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/competitions.css">
-    <link rel="stylesheet" href="./css/workshops.css">
-    <script>
-        var urls = <%- JSON.stringify(workshopUrl) %> ;
 
-    </script>
+	<link rel="stylesheet" href="./css/style.css"><!--for front page only-->
+    <% include partials/head %>
+
 </head>
 
+<% include partials/header %>
+
 <body>
-    <div class="preloader">
-        <div class="preloader-ring"></div>
-    </div>
-    <% include partials/header %>
 
-    <!-- Shaders -->
-    <script id="shader-fs" type="x-shader/x-fragment">
-        #ifdef GL_ES
-	    precision highp float;
-	    #endif
-	  void main(void) {
-	   gl_FragColor = vec4(0.2, 0.3, 0.4, 1.0);
-	  }
-	</script>
-    <script id="shader-vs" type="x-shader/x-vertex">
-        attribute vec3 vertexPosition;
+    <!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9JNFT"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 
-	  uniform mat4 modelViewMatrix;
-	  uniform mat4 perspectiveMatrix;
-
-	  void main(void) {
-	    gl_Position = perspectiveMatrix * modelViewMatrix * vec4(  vertexPosition, 1.0);
-	  }
-	</script>
+		
 
 
-    <!-- three.js -->
+		<div class="wrapper">
 
-    <div id="webgl-output"></div>
+			<nav class="navigation">
+				<ul class="navigation__list">
+					<li class="navigation__item navigation__item--active">
+						<a href="#start" title="Home">
+							<div class="navigation__icon"><span class="navigation__number">1</span></div>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#intro" title="Introduction">
+							<div class="navigation__icon"><span class="navigation__number">2</span></div>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#competition" title="Competition">
+							<div class="navigation__icon"><span class="navigation__number">3</span></div>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#workshop" title="Workshops">
+							<div class="navigation__icon"><span class="navigation__number">4</span></div>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#talk" title="Talks">
+							<div class="navigation__icon"><span class="navigation__number">5</span></div>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#debsoc" title="DebSoc">
+							<div class="navigation__icon"><span class="navigation__number">6</span></div>
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#proshow" title="ProShow">
+							<div class="navigation__icon"><span class="navigation__number">7</span></div>
+						</a>
+					</li>
+					
+				</ul>
+			</nav>
 
-    <div class="bg-mask"></div>
-    <h1 style="padding-top:15vh; text-align: center; transform: scale(1);">Workshops</h1>
-    <div class="main-content">
-        <div class="scroll-content" id="style-1">
-            <div class="inner-content ch-grid">
-                <div class="text-padding" style="transform: scale(1);">
-                    <div class="row quz">
-                        <div class="col-sm-12 col-md-4 i spa">
-                            <li>
-                                <div class="ch-item ch-img-aiandml more-details">
-                                    <div class="ch-info">
-                                        <h3 class="link">AI and ML - Python</h3>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
+			<div class="astroid"></div>
 
-                        <div class="col-sm-12 col-md-4 j spa">
-                            <li>
-                                <div class="ch-item ch-img-webdev more-details">
-                                    <div class="ch-info">
-                                        <h3 class="link">Web-Dev</h3>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                    </div>
-                    <div class="row quz">
-                        <div class="col-sm-12 col-md-4 i spa">
-                            <li>
-                                <div class="ch-item ch-img-android more-details">
-                                    <div class="ch-info">
-                                        <h3 class="link">Android</h3>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
+	
 
-                        <div class="col-sm-12 col-md-4 j spa">
-                            <li>
-                                <div class="ch-item ch-img-rubik more-details">
-                                    <div class="ch-info">
-                                        <h3 class="link">Rubik's Cube</h3>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                    </div>
+			<section class="section section--header" id="start">
+				
+				<div class="stars"><div class="nebula"></div></div>
+				<div class="mars">
+					<div class="mars__planet"></div>
+					<div class="mars__black"></div>
+				</div>
 
+				<header class="header">
+					<div class="wrap">
+						<div class="row center-md">
+							<div class="col-md-12">
+								<div class="header__content">
+									<h2 class="header__title header__title--center">COMING SOON</h2>
+								</div>
+							</div>
+						</div>
+					</div>
 
+					<div class="header__scroll">
+						<a href="#intro" class="button button--mouse button--active"></a>
+					</div>
+				</header>
 
+			</section>
 
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <% include partials/footer %>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/loginscript.js"></script>
-    <script src="js/scrollmagic.js"></script>
-    <script src="js/sphere.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/workshop.js"></script>
-    <script>
-        window.addEventListener('load', function () {
-
-            var el = document.querySelector('.preloader');
-            el.style.opacity = 1;
-
-            (function fade() {
-                if ((el.style.opacity -= 0.15) < 0) {
-                    window.scrollTo(0, 0);
-                    el.style.display = "none";
-                    controls.redraw();
-                    controls.rend();
-                    controls.start();
-                } else {
-                    requestAnimationFrame(fade);
-                }
-            })();
-        });
-    </script>
-    <script>
-        if (screen.width > 1024) {
-            function remove() {
-                var elem = document.getElementById('rlbuttn');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-    <script>
-        var elem = document.getElementById('rlbuttn_menu');
-        if (elem != null) {
-            if (screen.width > 1024) {
-                function remove() {
-
-                    elem.parentNode.removeChild(elem);
-                    return false;
-                }
-                remove();
-            }
-        }
-    </script>
-
-    <script>
-        var elem = document.getElementById('faqbtn_rm');
-        if (elem != null) {
-            if (screen.width < 500) {
-                function remove() {
-
-                    elem.parentNode.removeChild(elem);
-                    return false;
-                }
-                remove();
-            }
-        }
-    </script>
-    <script>
-        if (screen.width > 500) {
-            function remove() {
-                var elem = document.getElementById('faq_rm');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-    <script>
-        if (screen.width < 769) {
-            function remove() {
-                var elem = document.getElementById('seprate');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-    <script>
-        if (screen.width > 769) {
-            function remove() {
-                var elem = document.getElementById('mobsep');
-                elem.parentNode.removeChild(elem);
-                return false;
-            }
-            remove();
-        }
-    </script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="js/js.js"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-125190547-1');
-    </script>
-</body>
-
+			
+			<%include partials/footer%>
+			
+			<script>
+				$(window).scroll(function() {
+					if ($(document).scrollTop() > 100) {
+						//console.log("ahkdsj");
+						$("#navbar-menu").addClass("color-change");
+						$('footer').addClass("color-change");
+		
+					} else {
+						$("#navbar-menu").removeClass("color-change");
+						$('footer').removeClass("color-change");
+					}
+				});
+		
+				
+		
+		
+				</script>
+			
+	</body>
 </html>

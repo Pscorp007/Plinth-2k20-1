@@ -10,3 +10,4 @@ console.log('mongodb+srv://'+ dbusername + ':' + dbpassword + dburl);
 
 
 exports.url = 'mongodb+srv://'+ dbusername + ':' + dbpassword + dburl;
+//exports.url = 'mongodb://localhost/user_data2k20';

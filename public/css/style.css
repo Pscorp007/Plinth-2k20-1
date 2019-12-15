@@ -2146,7 +2146,7 @@ body {
 	display: block;
 	float: left;
 	width: 100%;
-	padding: 0 5rem;
+	padding: 0 2rem;
 	margin: 20rem 0 0 0;
 
 	-webkit-transition: background-color 1000ms linear;
@@ -2238,9 +2238,9 @@ body {
 
 @media screen and (max-width: 48em) {
 	.footer__item--right {
-		padding-left: 2rem;
+		padding-left: 1.5rem;
 		padding-right: 0rem;
-		width: 75%;
+		width: 50%;
 		text-align: right;
 		margin: 0;
 	}
@@ -2777,7 +2777,7 @@ p {
 	margin: 23rem 0 0 5rem;
 	display: none;
 	opacity: 0;
-	transition: opacity 500ms;
+	transition: opacity 2000ms;
 }
 
 @media screen and (min-width: 75em) {
@@ -2790,7 +2790,7 @@ p {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	transition: opacity 500ms;
+	transition: opacity 2000ms;
 }
 
 .navigation__list:not(.toggled) {
@@ -3033,16 +3033,16 @@ body.ready .navigation {
 }
 
 .block__title {
-	letter-spacing: 0.25em;
+	letter-spacing: 0.15em;
 	margin: 3rem -0.3em 0 0;
-	font-size: 8rem;
+	font-size: 7rem;
 	letter-spacing: 0em;
 }
 
 .block__title--mars {
-	letter-spacing: 0.25em;
+	letter-spacing: 0.15em;
 	margin: 3rem -0.3em 0 0;
-	font-size: 5.5rem;
+	font-size: 5rem;
 	letter-spacing: 0em;
 }
 
@@ -3060,6 +3060,7 @@ body.ready .navigation {
 @media screen and (min-width: 62em) {
 	.block__title--big {
 		width: 100rem;
+		font-size: 5.5rem;
 	}
 }
 
@@ -3085,18 +3086,18 @@ body.ready .navigation {
 @media screen and (max-width: 30em) {
 	.block__title {
 		font-size: 3.6rem;
-		padding: 0 2.7rem 0 1.7rem;
+		padding: 0 2.7rem 0 1rem;
 	}
 	.block__title--mars {
-		font-size: 3.3rem;
-		margin: 0 0 20rem 0rem;
+		font-size: 3rem;
+		margin: auto auto;
 	}
 	.block__title--boek {
 		font-size: 5.5rem;
 		margin: 0 0px 10rem 2rem;
 	}
 	.block__title--landing {
-		font-size: 5.0rem;
+		font-size: 3.6rem;
 		margin: 0 0px 10rem 0rem;
 	}
 	.block__title--magazine {
@@ -3104,7 +3105,7 @@ body.ready .navigation {
 		margin: 0 0px 10rem 0rem;
 	}
 	.block__title--quiz {
-		font-size: 5.5rem;
+		font-size: 4rem;
 		margin: 0 0px 20rem 0rem;
 	}
 }
@@ -3342,10 +3343,10 @@ body.ready .mars__black {
 }
 
 .mars__logo {
-	background-image: url("./media/Header/logo-plinth1.png");
+	background-image: url("./media/Header/logo_new2.png");
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 30rem;
+	width: 35rem;
 	height: 9.8rem;
 	display: block;
 	position: relative;
@@ -3367,7 +3368,7 @@ body.ready .mars__logo {
 @media screen and (min-width: 62em) {
 	.mars__logo {
 		background-size: cover;
-		width: 55.6rem;
+		width: 65rem;
 		height: 17.8rem;
 	}
 }
@@ -4338,6 +4339,21 @@ body.ready .stars {
 	text-decoration: none;
 	color: white;
 	transition: color 0.25s ease-in;
+}
+
+@media screen and (max-width: 48em) {
+	.facebook-link {
+		margin-right: 15px;
+	}
+	.twitter-link {
+		margin-right: 15px;
+	}
+	.instagram-link {
+		margin-right: 15px;
+	}
+	.youtube-link {
+		margin-right: 15px;
+	}
 }
 
 .fa-youtube-play:hover {

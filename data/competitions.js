@@ -3,7 +3,7 @@ module.exports.competitions = {
         {
 
             eventUrl: 'enigma',
-            fee:200,
+            fee:400,
             paymentURL: null,
             clubName: "Coding",
             eventName: "Enigma",

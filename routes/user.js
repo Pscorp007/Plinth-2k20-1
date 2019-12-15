@@ -149,15 +149,17 @@ router.post('/user_register_complete', Verify.verifyOrdinaryUser, function (req,
                 secure: false
             });
             Utils.resSheet(user);
-            res.json({
-                status: true
-            });
+            // res.json({
+            //     status: true
+            // });
+			res.redirect('/profile');
             return;
 
         } else {
-            res.json({
-                status: false
-            });
+            // res.json({
+            //     status: false
+            // });
+			res.render("redirect.ejs")
             return;
 
         }
